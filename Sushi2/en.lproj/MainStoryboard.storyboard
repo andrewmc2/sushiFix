@@ -60,7 +60,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dg-RJ-bxi">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Close">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -134,7 +134,6 @@
         <!--Wiki View Controller-->
         <scene sceneID="hN7-vr-Asd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bF9-0D-Fu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="yE3-AY-am1" customClass="WikiViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i6s-Gt-Frs">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
@@ -169,6 +168,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="h0m-bs-mhf"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bF9-0D-Fu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1132" y="1398"/>
         </scene>
@@ -195,7 +195,6 @@
         <!--Navigation Controller - Wiki-->
         <scene sceneID="HaN-qc-fGU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FiP-3M-Ebd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="0l8-Xi-sVc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="2" title="Wiki" id="x5Z-AE-aiC"/>
                     <toolbarItems/>
@@ -208,6 +207,7 @@
                         <segue destination="yE3-AY-am1" kind="relationship" relationship="rootViewController" id="Fg8-pM-IXt"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiP-3M-Ebd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="606" y="1398"/>
         </scene>
