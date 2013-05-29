@@ -187,6 +187,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8OL-ue-jxU"/>
+                    <connections>
+                        <outlet property="flickrImage" destination="NCz-9v-aGk" id="ajs-Kv-rW6"/>
+                        <outlet property="sushiName" destination="N8k-Mq-sUd" id="rHC-c7-6EN"/>
+                        <outlet property="wikiText" destination="kGa-SD-VcE" id="1UY-qd-6Au"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W09-Pk-XbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -246,7 +251,7 @@
                                             <outlet property="japaneseSushiName" destination="oyZ-NR-fqJ" id="zZh-Oy-mUm"/>
                                             <outlet property="sushiImage" destination="LfB-fE-2zD" id="itj-N3-ftr"/>
                                             <outlet property="sushiName" destination="T2z-7w-CNs" id="G1U-Yg-LZV"/>
-                                            <segue destination="1TD-Az-2h5" kind="push" id="UH9-uJ-VhN"/>
+                                            <segue destination="1TD-Az-2h5" kind="push" identifier="wikiDetailPush" id="UH9-uJ-VhN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -265,6 +270,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="h0m-bs-mhf"/>
+                    <connections>
+                        <outlet property="tableView" destination="Cyy-4L-xea" id="ltz-1O-Yh1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bF9-0D-Fu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -371,9 +379,17 @@
         </class>
         <class className="WikiDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="flickrImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="sushiName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wikiText" candidateClass="UITextView"/>
+            </relationships>
         </class>
         <class className="WikiViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SushiType.h"
 
-@interface WikiViewController : UIViewController
 
+@interface WikiViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

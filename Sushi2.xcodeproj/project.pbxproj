@@ -23,6 +23,7 @@
 		9E764E8617568F1F00FEB118 /* SushiTypeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E764E8517568F1F00FEB118 /* SushiTypeTableCell.m */; };
 		9E764E891756932200FEB118 /* WikiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E764E881756932200FEB118 /* WikiDetailViewController.m */; };
 		9E764E8C1756983300FEB118 /* SushiType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E764E8B1756983300FEB118 /* SushiType.m */; };
+		9E764E8E17569B8C00FEB118 /* dynamiteRoll.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E764E8D17569B8C00FEB118 /* dynamiteRoll.png */; };
 		DD657FE41756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		9E764E881756932200FEB118 /* WikiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiDetailViewController.m; sourceTree = "<group>"; };
 		9E764E8A1756983300FEB118 /* SushiType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SushiType.h; sourceTree = "<group>"; };
 		9E764E8B1756983300FEB118 /* SushiType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SushiType.m; sourceTree = "<group>"; };
+		9E764E8D17569B8C00FEB118 /* dynamiteRoll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dynamiteRoll.png; sourceTree = "<group>"; };
 		DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 		9E764E5F175667AC00FEB118 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9E764E8D17569B8C00FEB118 /* dynamiteRoll.png */,
 				9E764E60175667AC00FEB118 /* Sushi2-Info.plist */,
 				9E764E61175667AC00FEB118 /* InfoPlist.strings */,
 				9E764E64175667AC00FEB118 /* main.m */,
@@ -192,6 +195,7 @@
 				9E764E6F175667AC00FEB118 /* Default-568h@2x.png in Resources */,
 				9E764E72175667AC00FEB118 /* MainStoryboard.storyboard in Resources */,
 				DD657FE41756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg in Resources */,
+				9E764E8E17569B8C00FEB118 /* dynamiteRoll.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

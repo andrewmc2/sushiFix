@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    NSLog(@"%@",self.selectedSushiType.name);
+    self.sushiName.text = self.selectedSushiType.name;
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +36,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end
