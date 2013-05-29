@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface NearViewController : UIViewController
+@interface NearViewController : UIViewController <CLLocationManagerDelegate>
 
 @end

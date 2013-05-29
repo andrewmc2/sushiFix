@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WikiViewController : UIViewController
+
+@interface WikiViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
