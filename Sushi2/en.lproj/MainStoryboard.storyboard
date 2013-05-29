@@ -134,7 +134,6 @@
         <!--Wiki View Controller-->
         <scene sceneID="hN7-vr-Asd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bF9-0D-Fu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="yE3-AY-am1" customClass="WikiViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i6s-Gt-Frs">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
@@ -161,14 +160,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Oz0-Sy-Z6Z" firstAttribute="top" secondItem="i6s-Gt-Frs" secondAttribute="top" constant="50" id="EcV-1r-MRH"/>
+                            <constraint firstAttribute="trailing" secondItem="Oz0-Sy-Z6Z" secondAttribute="trailing" constant="74" id="82U-2D-K3h"/>
+                            <constraint firstAttribute="bottom" secondItem="Oz0-Sy-Z6Z" secondAttribute="bottom" constant="116" id="CH3-uC-sJ4"/>
                             <constraint firstItem="b44-xY-ZuG" firstAttribute="top" secondItem="i6s-Gt-Frs" secondAttribute="top" constant="167" id="M2e-j8-vOT"/>
                             <constraint firstItem="b44-xY-ZuG" firstAttribute="leading" secondItem="i6s-Gt-Frs" secondAttribute="leading" constant="125" id="Scb-bO-M28"/>
-                            <constraint firstAttribute="trailing" secondItem="Oz0-Sy-Z6Z" secondAttribute="trailing" constant="72" id="piy-hl-GDP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="h0m-bs-mhf"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bF9-0D-Fu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1132" y="1398"/>
         </scene>
@@ -195,7 +195,6 @@
         <!--Navigation Controller - Wiki-->
         <scene sceneID="HaN-qc-fGU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FiP-3M-Ebd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="0l8-Xi-sVc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="2" title="Wiki" id="x5Z-AE-aiC"/>
                     <toolbarItems/>
@@ -208,6 +207,7 @@
                         <segue destination="yE3-AY-am1" kind="relationship" relationship="rootViewController" id="Fg8-pM-IXt"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiP-3M-Ebd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="606" y="1398"/>
         </scene>
