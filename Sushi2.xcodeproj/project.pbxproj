@@ -23,6 +23,8 @@
 		9E764E8617568F1F00FEB118 /* SushiTypeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E764E8517568F1F00FEB118 /* SushiTypeTableCell.m */; };
 		9E764E891756932200FEB118 /* WikiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E764E881756932200FEB118 /* WikiDetailViewController.m */; };
 		9E764E8C1756983300FEB118 /* SushiType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E764E8B1756983300FEB118 /* SushiType.m */; };
+		C72E9BA41756A443007BFFF3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72E9BA31756A443007BFFF3 /* MapKit.framework */; };
+		C72E9BA61756A44D007BFFF3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72E9BA51756A44D007BFFF3 /* CoreLocation.framework */; };
 		DD657FE41756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		9E764E881756932200FEB118 /* WikiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiDetailViewController.m; sourceTree = "<group>"; };
 		9E764E8A1756983300FEB118 /* SushiType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SushiType.h; sourceTree = "<group>"; };
 		9E764E8B1756983300FEB118 /* SushiType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SushiType.m; sourceTree = "<group>"; };
+		C72E9BA31756A443007BFFF3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C72E9BA51756A44D007BFFF3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C72E9BA61756A44D007BFFF3 /* CoreLocation.framework in Frameworks */,
+				C72E9BA41756A443007BFFF3 /* MapKit.framework in Frameworks */,
 				9E764E59175667AC00FEB118 /* UIKit.framework in Frameworks */,
 				9E764E5B175667AC00FEB118 /* Foundation.framework in Frameworks */,
 				9E764E5D175667AC00FEB118 /* CoreGraphics.framework in Frameworks */,
@@ -90,6 +96,8 @@
 		9E764E57175667AC00FEB118 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C72E9BA51756A44D007BFFF3 /* CoreLocation.framework */,
+				C72E9BA31756A443007BFFF3 /* MapKit.framework */,
 				9E764E58175667AC00FEB118 /* UIKit.framework */,
 				9E764E5A175667AC00FEB118 /* Foundation.framework */,
 				9E764E5C175667AC00FEB118 /* CoreGraphics.framework */,
