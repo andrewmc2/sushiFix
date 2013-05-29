@@ -27,6 +27,9 @@
 		C72E9BA41756A443007BFFF3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72E9BA31756A443007BFFF3 /* MapKit.framework */; };
 		C72E9BA61756A44D007BFFF3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72E9BA51756A44D007BFFF3 /* CoreLocation.framework */; };
 		DD657FE41756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */; };
+		DD657FE717569CBA00A64ED6 /* VenueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DD657FE617569CBA00A64ED6 /* VenueObject.m */; };
+		DD657FE91756ADFF00A64ED6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD657FE81756ADFE00A64ED6 /* CoreLocation.framework */; };
+		DD657FEB1756AE6400A64ED6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD657FEA1756AE6400A64ED6 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,10 @@
 		C72E9BA31756A443007BFFF3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C72E9BA51756A44D007BFFF3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg"; sourceTree = "<group>"; };
+		DD657FE517569CBA00A64ED6 /* VenueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueObject.h; sourceTree = "<group>"; };
+		DD657FE617569CBA00A64ED6 /* VenueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueObject.m; sourceTree = "<group>"; };
+		DD657FE81756ADFE00A64ED6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DD657FEA1756AE6400A64ED6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD657FEB1756AE6400A64ED6 /* MapKit.framework in Frameworks */,
+				DD657FE91756ADFF00A64ED6 /* CoreLocation.framework in Frameworks */,
 				C72E9BA61756A44D007BFFF3 /* CoreLocation.framework in Frameworks */,
 				C72E9BA41756A443007BFFF3 /* MapKit.framework in Frameworks */,
 				9E764E59175667AC00FEB118 /* UIKit.framework in Frameworks */,
@@ -81,6 +90,8 @@
 		9E764E4C175667AC00FEB118 = {
 			isa = PBXGroup;
 			children = (
+				DD657FEA1756AE6400A64ED6 /* MapKit.framework */,
+				DD657FE81756ADFE00A64ED6 /* CoreLocation.framework */,
 				9E764E5E175667AC00FEB118 /* Sushi2 */,
 				9E764E57175667AC00FEB118 /* Frameworks */,
 				9E764E56175667AC00FEB118 /* Products */,
@@ -116,6 +127,8 @@
 				DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */,
 				9E764E7B17566C5A00FEB118 /* MapViewController.h */,
 				9E764E7C17566C5A00FEB118 /* MapViewController.m */,
+				DD657FE517569CBA00A64ED6 /* VenueObject.h */,
+				DD657FE617569CBA00A64ED6 /* VenueObject.m */,
 				9E764E7E17566C6400FEB118 /* NearViewController.h */,
 				9E764E7F17566C6400FEB118 /* NearViewController.m */,
 				9E764E8117566C6D00FEB118 /* WikiViewController.h */,
@@ -219,6 +232,7 @@
 				9E764E7D17566C5A00FEB118 /* MapViewController.m in Sources */,
 				9E764E8017566C6400FEB118 /* NearViewController.m in Sources */,
 				9E764E8317566C6D00FEB118 /* WikiViewController.m in Sources */,
+				DD657FE717569CBA00A64ED6 /* VenueObject.m in Sources */,
 				9E764E8617568F1F00FEB118 /* SushiTypeTableCell.m in Sources */,
 				9E764E891756932200FEB118 /* WikiDetailViewController.m in Sources */,
 				9E764E8C1756983300FEB118 /* SushiType.m in Sources */,
