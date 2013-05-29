@@ -373,7 +373,6 @@
     <resources>
         <image name="1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg" width="388" height="290"/>
     </resources>
-<<<<<<< HEAD
     <classes>
         <class className="MapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
@@ -410,8 +409,6 @@
             </relationships>
         </class>
     </classes>
-=======
->>>>>>> ca58051dbf40edbe33e3d8f6012c9dd23335009b
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
