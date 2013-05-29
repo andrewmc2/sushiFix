@@ -68,7 +68,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dg-RJ-bxi">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Close">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -168,10 +168,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Oz0-Sy-Z6Z" firstAttribute="top" secondItem="i6s-Gt-Frs" secondAttribute="top" constant="50" id="EcV-1r-MRH"/>
+                            <constraint firstAttribute="trailing" secondItem="Oz0-Sy-Z6Z" secondAttribute="trailing" constant="74" id="82U-2D-K3h"/>
+                            <constraint firstAttribute="bottom" secondItem="Oz0-Sy-Z6Z" secondAttribute="bottom" constant="116" id="CH3-uC-sJ4"/>
                             <constraint firstItem="b44-xY-ZuG" firstAttribute="top" secondItem="i6s-Gt-Frs" secondAttribute="top" constant="167" id="M2e-j8-vOT"/>
                             <constraint firstItem="b44-xY-ZuG" firstAttribute="leading" secondItem="i6s-Gt-Frs" secondAttribute="leading" constant="125" id="Scb-bO-M28"/>
-                            <constraint firstAttribute="trailing" secondItem="Oz0-Sy-Z6Z" secondAttribute="trailing" constant="72" id="piy-hl-GDP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="h0m-bs-mhf"/>
