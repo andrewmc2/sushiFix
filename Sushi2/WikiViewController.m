@@ -7,8 +7,11 @@
 //
 
 #import "WikiViewController.h"
+#import "SushiTypeTableCell.h"
 
 @interface WikiViewController ()
+
+@property (strong, nonatomic) NSMutableArray *sushiTypeArray;
 
 @end
 
@@ -33,6 +36,31 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma UITableViewDataSourceMethods
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *identifier = @"sushiTypeCell";
+    SushiTypeTableCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+//    if (cell == nil){
+//        cell = [[SushiTypeTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+//    }
+    //cell.textLabel.text = @"andrew";
+    
+    
+    return cell;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
 }
 
 @end

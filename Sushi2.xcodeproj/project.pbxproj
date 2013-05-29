@@ -20,6 +20,9 @@
 		9E764E7D17566C5A00FEB118 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E764E7C17566C5A00FEB118 /* MapViewController.m */; };
 		9E764E8017566C6400FEB118 /* NearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E764E7F17566C6400FEB118 /* NearViewController.m */; };
 		9E764E8317566C6D00FEB118 /* WikiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E764E8217566C6D00FEB118 /* WikiViewController.m */; };
+		9E764E8617568F1F00FEB118 /* SushiTypeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E764E8517568F1F00FEB118 /* SushiTypeTableCell.m */; };
+		9E764E891756932200FEB118 /* WikiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E764E881756932200FEB118 /* WikiDetailViewController.m */; };
+		9E764E8C1756983300FEB118 /* SushiType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E764E8B1756983300FEB118 /* SushiType.m */; };
 		DD657FE41756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +47,12 @@
 		9E764E7F17566C6400FEB118 /* NearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearViewController.m; sourceTree = "<group>"; };
 		9E764E8117566C6D00FEB118 /* WikiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikiViewController.h; sourceTree = "<group>"; };
 		9E764E8217566C6D00FEB118 /* WikiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiViewController.m; sourceTree = "<group>"; };
+		9E764E8417568F1F00FEB118 /* SushiTypeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SushiTypeTableCell.h; sourceTree = "<group>"; };
+		9E764E8517568F1F00FEB118 /* SushiTypeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SushiTypeTableCell.m; sourceTree = "<group>"; };
+		9E764E871756932200FEB118 /* WikiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikiDetailViewController.h; sourceTree = "<group>"; };
+		9E764E881756932200FEB118 /* WikiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiDetailViewController.m; sourceTree = "<group>"; };
+		9E764E8A1756983300FEB118 /* SushiType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SushiType.h; sourceTree = "<group>"; };
+		9E764E8B1756983300FEB118 /* SushiType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SushiType.m; sourceTree = "<group>"; };
 		DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +110,12 @@
 				9E764E7F17566C6400FEB118 /* NearViewController.m */,
 				9E764E8117566C6D00FEB118 /* WikiViewController.h */,
 				9E764E8217566C6D00FEB118 /* WikiViewController.m */,
+				9E764E871756932200FEB118 /* WikiDetailViewController.h */,
+				9E764E881756932200FEB118 /* WikiDetailViewController.m */,
+				9E764E8417568F1F00FEB118 /* SushiTypeTableCell.h */,
+				9E764E8517568F1F00FEB118 /* SushiTypeTableCell.m */,
+				9E764E8A1756983300FEB118 /* SushiType.h */,
+				9E764E8B1756983300FEB118 /* SushiType.m */,
 				9E764E5F175667AC00FEB118 /* Supporting Files */,
 			);
 			path = Sushi2;
@@ -192,6 +207,9 @@
 				9E764E7D17566C5A00FEB118 /* MapViewController.m in Sources */,
 				9E764E8017566C6400FEB118 /* NearViewController.m in Sources */,
 				9E764E8317566C6D00FEB118 /* WikiViewController.m in Sources */,
+				9E764E8617568F1F00FEB118 /* SushiTypeTableCell.m in Sources */,
+				9E764E891756932200FEB118 /* WikiDetailViewController.m in Sources */,
+				9E764E8C1756983300FEB118 /* SushiType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

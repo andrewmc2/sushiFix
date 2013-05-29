@@ -1,5 +1,5 @@
 //
-//  WikiViewController.h
+//  WikiDetailViewController.h
 //  Sushi2
 //
 //  Created by Andrew McCallum14 on 2013-05-29.
@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SushiType.h"
 
-@interface WikiViewController : UIViewController
-
+@interface WikiDetailViewController : UIViewController
 
 @end
