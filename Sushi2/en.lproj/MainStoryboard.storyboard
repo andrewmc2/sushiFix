@@ -139,11 +139,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wiki" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b44-xY-ZuG">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oz0-Sy-Z6Z">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button">
@@ -160,10 +155,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Oz0-Sy-Z6Z" secondAttribute="trailing" constant="74" id="82U-2D-K3h"/>
-                            <constraint firstAttribute="bottom" secondItem="Oz0-Sy-Z6Z" secondAttribute="bottom" constant="116" id="CH3-uC-sJ4"/>
-                            <constraint firstItem="b44-xY-ZuG" firstAttribute="top" secondItem="i6s-Gt-Frs" secondAttribute="top" constant="167" id="M2e-j8-vOT"/>
-                            <constraint firstItem="b44-xY-ZuG" firstAttribute="leading" secondItem="i6s-Gt-Frs" secondAttribute="leading" constant="125" id="Scb-bO-M28"/>
+                            <constraint firstAttribute="bottom" secondItem="Oz0-Sy-Z6Z" secondAttribute="bottom" constant="101" id="NDi-wN-nLB"/>
+                            <constraint firstItem="Oz0-Sy-Z6Z" firstAttribute="leading" secondItem="i6s-Gt-Frs" secondAttribute="leading" constant="78" id="rdV-vW-iHy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="h0m-bs-mhf"/>
