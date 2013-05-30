@@ -16,6 +16,7 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *needle;
 
+@property (strong, nonatomic) IBOutlet UILabel *nearestVenueLabel;
 
 @end
 

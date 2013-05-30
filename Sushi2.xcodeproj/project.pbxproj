@@ -126,7 +126,6 @@
 				9E764E67175667AC00FEB118 /* AppDelegate.h */,
 				9E764E68175667AC00FEB118 /* AppDelegate.m */,
 				9E764E70175667AC00FEB118 /* MainStoryboard.storyboard */,
-				DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */,
 				9E764E7B17566C5A00FEB118 /* MapViewController.h */,
 				9E764E7C17566C5A00FEB118 /* MapViewController.m */,
 				DD657FE517569CBA00A64ED6 /* VenueObject.h */,
@@ -149,6 +148,7 @@
 		9E764E5F175667AC00FEB118 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */,
 				C72E9BDA17571486007BFFF3 /* chopstickBowl.jpg */,
 				9E764E8D17569B8C00FEB118 /* dynamiteRoll.png */,
 				9E764E60175667AC00FEB118 /* Sushi2-Info.plist */,
