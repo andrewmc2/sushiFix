@@ -98,7 +98,7 @@
                  oneVenue.venueCategory = @"Public Space";
              } else {
           
-                 [categoryArray objectAtIndex:0];
+                 categoryInfo = [categoryArray objectAtIndex:0];
                  oneVenue.venueCategory = [categoryInfo objectForKey:@"name"];
              }
              NSLog(@"%@", oneVenue.venueCategory);
