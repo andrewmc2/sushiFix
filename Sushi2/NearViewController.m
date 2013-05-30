@@ -15,7 +15,7 @@
 }
 
 @property (strong, nonatomic) IBOutlet UIImageView *needle;
-
+@property (strong, nonatomic) IBOutlet UILabel *nearestVenueAddressLabel;
 @property (strong, nonatomic) IBOutlet UILabel *nearestVenueLabel;
 
 @end
@@ -35,14 +35,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-<<<<<<< HEAD
-    [self StartStandardlocationServices];
-    NSLog(@"%@", [itemArray objectAtIndex:4]);
+     NSLog(@"%@", [itemArray objectAtIndex:4]);
     
     
-=======
     [self StartStandardLocationServices];
->>>>>>> c4c6d6effbf3d25b0f95a6db47950f31b451fe8c
 
     self.needle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chopstickBowl.jpg"]];
     self.needle.frame = CGRectMake(10, 10, 70, 70);
@@ -50,6 +46,17 @@
     self.needle.opaque = NO;
 
     self.needle = self.needle;
+    [self nearestVenue];
+    
+}
+
+-(void) nearestVenue
+{
+    NSString *nearestVenue = [[itemArray objectAtIndex:0]objectForKey:@"name"];
+    NSString *nearestVenueAddress = [[itemArray objectAtIndex:0]valueForKeyPath: @"location.address"];
+    NSLog(@"the nearest venue is %@, and it is located %@", nearestVenue, nearestVenueAddress);
+    self.nearestVenueLabel.text =  nearestVenue;
+    self.nearestVenueAddressLabel.text = nearestVenueAddress;
     
 }
 
