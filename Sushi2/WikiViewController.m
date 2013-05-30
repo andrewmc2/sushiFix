@@ -28,6 +28,9 @@
     if ([segue.identifier isEqualToString:@"wikiDetailPush"]) {
         wikiDetailViewController = [segue destinationViewController];
         [wikiDetailViewController setSelectedSushiType:selectedSushiType];
+        
+        SushiType *indexSushi = [self.sushiTypeArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        [wikiDetailViewController setSelectedSushiType:indexSushi];
     }
     
     //    if ([segue.identifier isEqualToString:@"viewContact"]) {
@@ -66,14 +69,16 @@
 {
     //stuff
     SushiType *sushiType = [[SushiType alloc] init];
-    sushiType.name = @"Dynamite Roll";
+    sushiType.name = @"dynamite roll";
     sushiType.japaneseName = @"ダイナマイトロール";
+    sushiType.description = @"Dynamite roll is a type of Western-style sushi. It is common in Western Canada. It usually contains a piece of prawn tempura and masago (capelin roe), with vegetables like radish sprouts, avocado and/or cucumber, as well as Japanese mayonnaise. In another variant, hamachi (yellowtail) replaces prawn tempura.";
     sushiType.sushiLogo = [UIImage imageNamed:@"dynamiteRoll.png"];
     [self.sushiTypeArray addObject:sushiType];
     
     sushiType = [[SushiType alloc] init];
-    sushiType.name = @"California Roll";
+    sushiType.name = @"california roll";
     sushiType.japaneseName = @"カリフォルニアロール";
+    sushiType.description = @"The California roll is a maki-zushi, a kind of sushi roll, usually made inside-out, containing cucumber, crab meat or imitation crab, and avocado. In some countries it is made with mango or banana instead of avocado. Sometimes crab salad is substituted for the crab stick, and often the outer layer of rice (in an inside-out roll) is sprinkled with toasted sesame seeds, tobiko or masago.";
     sushiType.sushiLogo = [UIImage imageNamed:@"dynamiteRoll.png"];
     [self.sushiTypeArray addObject:sushiType];
     
@@ -108,6 +113,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.sushiTypeArray.count;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 }
 
 @end

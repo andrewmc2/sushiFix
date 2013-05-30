@@ -35,8 +35,8 @@
 	// Do any additional setup after loading the view.
     NSLog(@"%@",self.selectedSushiType.name);
     self.sushiName.text = self.selectedSushiType.name;
-    self.wikiText.text = @"andrew";
-    [self putWikiInTextfield];
+    [self addPictureFromFlickr];
+    self.wikiText.text = self.selectedSushiType.description;
 }
 
 
@@ -46,14 +46,21 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)putWikiInTextfield
+-(void)addPictureFromFlickr
 {
     sushiPicIdArray = [NSMutableArray array];
     sushiPicFarmArray = [NSMutableArray array];
     sushiPicServerArray = [NSMutableArray array];
     sushiPicSecretArray = [NSMutableArray array];
     
-    NSString *allParts = [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=072e43ef1d3d6c21afd0a0e704e2730f&tags=sushi&text=dynamite+roll&format=json&nojsoncallback=1&auth_token=72157633797958328-eff299d43d8ea864&api_sig=4a8739e8c0e062134119dce4ce5fbf82"];
+    
+//    - (NSString *)stringByReplacingOccurrencesOfString:(NSString *)target withString:(NSString *)replacement
+//    
+    NSString *searchParameters = [self.selectedSushiType.name stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    NSString *searchParametersLowerCase = [searchParameters lowercaseString];
+    NSLog(@"%@",searchParametersLowerCase);
+    
+    NSString *allParts = [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=072e43ef1d3d6c21afd0a0e704e2730f&tags=sushi&text=sushi+%@&format=json&nojsoncallback=1",searchParametersLowerCase];
     NSURL *url = [NSURL URLWithString:allParts];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:urlRequest
@@ -77,8 +84,7 @@
              [sushiPicSecretArray addObject:secretIdString];
          }
          
-         NSString *flickTestUrlString = [NSString stringWithFormat:@"http://farm%@.staticflickr.com/%@/%@_%@.jpg", sushiPicFarmArray[0],sushiPicServerArray[0],sushiPicIdArray[0],sushiPicSecretArray[0]];
-         NSLog(@"%@",flickTestUrlString);
+         NSString *flickTestUrlString = [NSString stringWithFormat:@"http://farm%@.staticflickr.com/%@/%@_%@.jpg", sushiPicFarmArray[1],sushiPicServerArray[1],sushiPicIdArray[1],sushiPicSecretArray[1]];
          
          NSURL *urlPic = [NSURL URLWithString:flickTestUrlString];
          NSData *imageData = [NSData dataWithContentsOfURL:urlPic];
