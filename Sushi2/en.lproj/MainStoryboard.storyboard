@@ -146,18 +146,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYc-7Q-oNi">
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCz-9v-aGk"/>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="NCz-9v-aGk" firstAttribute="leading" secondItem="cYc-7Q-oNi" secondAttribute="leading" type="default" id="1S8-hl-O0Q"/>
-                                    <constraint firstItem="NCz-9v-aGk" firstAttribute="bottom" secondItem="cYc-7Q-oNi" secondAttribute="bottom" type="default" id="MRP-8u-Rj9"/>
-                                    <constraint firstItem="NCz-9v-aGk" firstAttribute="top" secondItem="cYc-7Q-oNi" secondAttribute="top" type="default" id="mrs-BR-9vX"/>
-                                    <constraint firstItem="NCz-9v-aGk" firstAttribute="trailing" secondItem="cYc-7Q-oNi" secondAttribute="trailing" type="default" id="nqT-it-nHY"/>
-                                </constraints>
-                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEU-Xh-y8p">
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGa-SD-VcE">
@@ -184,25 +172,29 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anp-2I-gTo">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2cD-iK-cI1"/>
+                                    <constraint firstAttribute="height" constant="128" id="LmD-SD-oOG"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="anp-2I-gTo" firstAttribute="top" secondItem="3OX-Os-Sn4" secondAttribute="top" constant="20" symbolic="YES" type="default" id="7wQ-wO-jPA"/>
                             <constraint firstItem="aEU-Xh-y8p" firstAttribute="trailing" secondItem="3OX-Os-Sn4" secondAttribute="trailing" type="default" id="865-tb-ufP"/>
                             <constraint firstItem="N8k-Mq-sUd" firstAttribute="top" secondItem="3OX-Os-Sn4" secondAttribute="top" constant="164" id="9TK-bi-tpY"/>
-                            <constraint firstItem="cYc-7Q-oNi" firstAttribute="leading" secondItem="3OX-Os-Sn4" secondAttribute="leading" type="default" id="Edl-Md-may"/>
                             <constraint firstAttribute="trailing" secondItem="N8k-Mq-sUd" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="FRO-yh-U9K"/>
                             <constraint firstItem="aEU-Xh-y8p" firstAttribute="leading" secondItem="3OX-Os-Sn4" secondAttribute="leading" type="default" id="H6e-qk-zag"/>
-                            <constraint firstItem="cYc-7Q-oNi" firstAttribute="trailing" secondItem="3OX-Os-Sn4" secondAttribute="trailing" type="default" id="LvJ-4a-ijv"/>
                             <constraint firstItem="aEU-Xh-y8p" firstAttribute="top" secondItem="N8k-Mq-sUd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PwI-Pd-1Ve"/>
+                            <constraint firstItem="anp-2I-gTo" firstAttribute="leading" secondItem="3OX-Os-Sn4" secondAttribute="leading" constant="47" id="Wtz-r2-jRR"/>
                             <constraint firstItem="aEU-Xh-y8p" firstAttribute="bottom" secondItem="3OX-Os-Sn4" secondAttribute="bottom" type="default" id="Ypk-JA-xU1"/>
-                            <constraint firstItem="cYc-7Q-oNi" firstAttribute="top" secondItem="3OX-Os-Sn4" secondAttribute="top" type="default" id="gfj-rw-W4y"/>
-                            <constraint firstAttribute="bottom" secondItem="cYc-7Q-oNi" secondAttribute="bottom" constant="305" id="osK-Lb-1o5"/>
                             <constraint firstItem="N8k-Mq-sUd" firstAttribute="leading" secondItem="3OX-Os-Sn4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="x8z-bN-ywe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8OL-ue-jxU"/>
                     <connections>
-                        <outlet property="flickrImage" destination="NCz-9v-aGk" id="ajs-Kv-rW6"/>
+                        <outlet property="flickrImage" destination="anp-2I-gTo" id="DZZ-Ib-6ot"/>
                         <outlet property="sushiName" destination="N8k-Mq-sUd" id="rHC-c7-6EN"/>
                         <outlet property="wikiText" destination="kGa-SD-VcE" id="1UY-qd-6Au"/>
                     </connections>
