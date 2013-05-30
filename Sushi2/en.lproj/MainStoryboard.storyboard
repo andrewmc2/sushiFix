@@ -75,7 +75,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Near" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sH-M7-4EX">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nearest Venue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sH-M7-4EX">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="KKP-k9-He8"/>
+                                    <constraint firstAttribute="height" constant="60" id="KMu-Ek-GiC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -93,16 +97,28 @@
                                     <segue destination="EWw-Nz-cLR" kind="push" id="hae-DZ-ZHZ"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="chopstickBowl.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CFl-UX-Qqj">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="7dM-jy-3yN"/>
+                                    <constraint firstAttribute="width" constant="83" id="BwE-3H-rfS"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="1sH-M7-4EX" secondAttribute="bottom" constant="189" id="Bg3-Gj-eF1"/>
-                            <constraint firstItem="1Dg-RJ-bxi" firstAttribute="top" secondItem="V8U-ph-Krf" secondAttribute="top" constant="123" id="OEr-1C-D3H"/>
-                            <constraint firstItem="1sH-M7-4EX" firstAttribute="leading" secondItem="V8U-ph-Krf" secondAttribute="leading" constant="125" id="enb-2i-IWR"/>
-                            <constraint firstItem="1Dg-RJ-bxi" firstAttribute="leading" secondItem="V8U-ph-Krf" secondAttribute="leading" constant="150" id="yTE-Fa-ZKA"/>
+                            <constraint firstAttribute="trailing" secondItem="1Dg-RJ-bxi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5HU-K8-9Nt"/>
+                            <constraint firstItem="1sH-M7-4EX" firstAttribute="top" secondItem="V8U-ph-Krf" secondAttribute="top" constant="212" id="FL2-ot-RwB"/>
+                            <constraint firstItem="1sH-M7-4EX" firstAttribute="leading" secondItem="V8U-ph-Krf" secondAttribute="leading" constant="95" id="Nc0-n4-hwN"/>
+                            <constraint firstItem="CFl-UX-Qqj" firstAttribute="top" secondItem="V8U-ph-Krf" secondAttribute="top" constant="9" id="a6d-u6-GAf"/>
+                            <constraint firstAttribute="bottom" secondItem="1Dg-RJ-bxi" secondAttribute="bottom" constant="30" id="pYg-Px-nCi"/>
+                            <constraint firstItem="CFl-UX-Qqj" firstAttribute="leading" secondItem="V8U-ph-Krf" secondAttribute="leading" constant="7" id="x70-5K-J18"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DeF-C0-LxY"/>
+                    <connections>
+                        <outlet property="nearestVenueLabel" destination="1sH-M7-4EX" id="UAS-da-mqm"/>
+                        <outlet property="needle" destination="CFl-UX-Qqj" id="1Bv-9v-Ibx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cl-hr-GEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -364,6 +380,7 @@
     </scenes>
     <resources>
         <image name="1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg" width="388" height="290"/>
+        <image name="chopstickBowl.jpg" width="449" height="299"/>
     </resources>
     <classes>
         <class className="MapViewController" superclassName="UIViewController">
@@ -377,6 +394,10 @@
         </class>
         <class className="NearViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NearViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="nearestVenueLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="needle" candidateClass="UIImageView"/>
+            </relationships>
         </class>
         <class className="SushiTypeTableCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SushiTypeTableCell.h"/>
