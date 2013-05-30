@@ -15,3 +15,5 @@
 @interface MapViewController : UIViewController<MKMapViewDelegate>
 
 @end
+
+NSArray* itemArray;
