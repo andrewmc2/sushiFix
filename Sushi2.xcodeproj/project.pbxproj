@@ -62,7 +62,6 @@
 		9E764E8D17569B8C00FEB118 /* dynamiteRoll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dynamiteRoll.png; sourceTree = "<group>"; };
 		C72E9BA31756A443007BFFF3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C72E9BA51756A44D007BFFF3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-
 		DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg"; sourceTree = "<group>"; };
 		DD657FE517569CBA00A64ED6 /* VenueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueObject.h; sourceTree = "<group>"; };
 		DD657FE617569CBA00A64ED6 /* VenueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueObject.m; sourceTree = "<group>"; };

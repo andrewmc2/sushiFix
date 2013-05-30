@@ -12,8 +12,9 @@
 @interface WikiDetailViewController : UIViewController
 
 @property (strong, nonatomic) SushiType *selectedSushiType;
-@property (weak, nonatomic) IBOutlet UIImageView *flickrImage;
+
 @property (weak, nonatomic) IBOutlet UILabel *sushiName;
 @property (weak, nonatomic) IBOutlet UITextView *wikiText;
+@property (weak, nonatomic) IBOutlet UIImageView *flickrImage;
 
 @end

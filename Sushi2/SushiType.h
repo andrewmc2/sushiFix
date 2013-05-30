@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *japaneseName;
+@property (strong, nonatomic) NSString *description;
 @property (strong, nonatomic) UIImage *sushiLogo;
 
 @end
