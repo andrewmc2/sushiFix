@@ -35,14 +35,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-<<<<<<< HEAD
-    [self StartStandardlocationServices];
     NSLog(@"%@", [itemArray objectAtIndex:4]);
     
-    
-=======
+
     [self StartStandardLocationServices];
->>>>>>> c4c6d6effbf3d25b0f95a6db47950f31b451fe8c
 
     self.needle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chopstickBowl.jpg"]];
     self.needle.frame = CGRectMake(10, 10, 70, 70);
