@@ -150,18 +150,28 @@
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGa-SD-VcE">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="115" id="JwO-Ax-JAk"/>
+                                        </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1MX-pM-Zf7">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="Tdl-sM-y33"/>
+                                            <constraint firstAttribute="height" constant="128" id="ktc-ua-8l9"/>
+                                        </constraints>
+                                    </scrollView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="kGa-SD-VcE" firstAttribute="centerY" secondItem="aEU-Xh-y8p" secondAttribute="centerY" type="default" id="7sE-xL-p3Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="1MX-pM-Zf7" secondAttribute="bottom" constant="6" id="1L1-bs-Uwb"/>
                                     <constraint firstItem="kGa-SD-VcE" firstAttribute="leading" secondItem="aEU-Xh-y8p" secondAttribute="leading" type="default" id="NsI-Mb-byE"/>
                                     <constraint firstItem="kGa-SD-VcE" firstAttribute="trailing" secondItem="aEU-Xh-y8p" secondAttribute="trailing" type="default" id="SE9-PA-917"/>
+                                    <constraint firstItem="1MX-pM-Zf7" firstAttribute="leading" secondItem="aEU-Xh-y8p" secondAttribute="leading" constant="46" id="UxV-Eh-I2E"/>
                                     <constraint firstItem="kGa-SD-VcE" firstAttribute="centerX" secondItem="aEU-Xh-y8p" secondAttribute="centerX" type="default" id="kC6-CZ-beT"/>
                                     <constraint firstItem="kGa-SD-VcE" firstAttribute="top" secondItem="aEU-Xh-y8p" secondAttribute="top" type="default" id="nm4-Ub-0dj"/>
-                                    <constraint firstItem="kGa-SD-VcE" firstAttribute="bottom" secondItem="aEU-Xh-y8p" secondAttribute="bottom" type="default" id="uNO-bG-xyH"/>
+                                    <constraint firstItem="1MX-pM-Zf7" firstAttribute="top" secondItem="kGa-SD-VcE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zZS-yy-X7S"/>
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8k-Mq-sUd">
@@ -195,6 +205,7 @@
                     <navigationItem key="navigationItem" id="8OL-ue-jxU"/>
                     <connections>
                         <outlet property="flickrImage" destination="anp-2I-gTo" id="DZZ-Ib-6ot"/>
+                        <outlet property="myScrollView" destination="1MX-pM-Zf7" id="tCk-sQ-852"/>
                         <outlet property="sushiName" destination="N8k-Mq-sUd" id="rHC-c7-6EN"/>
                         <outlet property="wikiText" destination="kGa-SD-VcE" id="1UY-qd-6Au"/>
                     </connections>
@@ -390,6 +401,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiDetailViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="flickrImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="myScrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="sushiName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="wikiText" candidateClass="UITextView"/>
             </relationships>

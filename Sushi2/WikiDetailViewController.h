@@ -17,4 +17,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *wikiText;
 @property (weak, nonatomic) IBOutlet UIImageView *flickrImage;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
+
 @end

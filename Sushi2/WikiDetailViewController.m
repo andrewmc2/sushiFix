@@ -14,7 +14,10 @@
     NSMutableArray *sushiPicFarmArray;
     NSMutableArray *sushiPicSecretArray;
     NSMutableArray *sushiPicServerArray;
+    int yPosition;
 }
+
+-(void)putLabelsInScrollView:(int)numberOfLabels;
 
 @end
 
@@ -37,6 +40,10 @@
     self.sushiName.text = self.selectedSushiType.name;
     [self addPictureFromFlickr];
     self.wikiText.text = self.selectedSushiType.description;
+    
+    yPosition = 0;
+    self.myScrollView.backgroundColor = [UIColor redColor];
+    [self putLabelsInScrollView:15];
 }
 
 
@@ -84,14 +91,33 @@
              [sushiPicSecretArray addObject:secretIdString];
          }
          
-         NSString *flickTestUrlString = [NSString stringWithFormat:@"http://farm%@.staticflickr.com/%@/%@_%@.jpg", sushiPicFarmArray[1],sushiPicServerArray[1],sushiPicIdArray[1],sushiPicSecretArray[1]];
+         for (int i = 0; i < 4; i++) {
+             NSString *flickTestUrlString = [NSString stringWithFormat:@"http://farm%@.staticflickr.com/%@/%@_%@.jpg", sushiPicFarmArray[i],sushiPicServerArray[i],sushiPicIdArray[i],sushiPicSecretArray[i]];
+             NSURL *urlPic = [NSURL URLWithString:flickTestUrlString];
+             NSData *imageData = [NSData dataWithContentsOfURL:urlPic];
+             UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(yPosition, 0, 150, 50)];
+             UIImage *instaPhoto = [[UIImage alloc] initWithData:imageData];
+             imageView.image = instaPhoto;
+             //[self.myScrollView addSubview:imageView];
+             //yPosition += 160;
+             NSLog(@"yo");
+         }
          
-         NSURL *urlPic = [NSURL URLWithString:flickTestUrlString];
-         NSData *imageData = [NSData dataWithContentsOfURL:urlPic];
-         UIImage *instaPhoto = [[UIImage alloc] initWithData:imageData];
-         self.flickrImage.image = instaPhoto;
+         //self.flickrImage.image = instaPhoto;
      }];
 }
 
+-(void)putLabelsInScrollView:(int)numberOfLabels
+{
+    for (int i = 0; i < numberOfLabels; i++) {
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(yPosition, 25, 180, 70)];
+        [label setText:@"lab"];
+        [self.myScrollView addSubview:label];
+        yPosition += 250;
+        
+    }
+    [self.myScrollView setContentSize:CGSizeMake(yPosition,self.myScrollView.frame.size.width)];
+    //[self.view addSubview:self.myScrollView];
+}
 
 @end
