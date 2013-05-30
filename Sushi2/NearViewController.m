@@ -31,6 +31,9 @@
 {
     [super viewDidLoad];
     [self StartStandardlocationServices];
+    NSLog(@"%@", [itemArray objectAtIndex:4]);
+    
+    
 
     
     

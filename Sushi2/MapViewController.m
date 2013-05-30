@@ -13,7 +13,7 @@
 
 {
     NSDictionary* firstDictionary;
-    NSArray* itemArray;
+    //NSArray* itemArray;
     NSDictionary *itemDictionary;
     NSMutableDictionary*
     listVenue;
