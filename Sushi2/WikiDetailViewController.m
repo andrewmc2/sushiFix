@@ -43,7 +43,7 @@
     
     yPosition = 0;
     self.myScrollView.backgroundColor = [UIColor redColor];
-    [self putLabelsInScrollView:15];
+    //[self putLabelsInScrollView:15];
 }
 
 
@@ -98,10 +98,11 @@
              UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(yPosition, 0, 150, 50)];
              UIImage *instaPhoto = [[UIImage alloc] initWithData:imageData];
              imageView.image = instaPhoto;
-             //[self.myScrollView addSubview:imageView];
-             //yPosition += 160;
+             [self.myScrollView addSubview:imageView];
+             yPosition += 160;
              NSLog(@"yo");
          }
+         [self.myScrollView setContentSize:CGSizeMake(yPosition,self.myScrollView.frame.size.width)];
          
          //self.flickrImage.image = instaPhoto;
      }];
@@ -113,11 +114,11 @@
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(yPosition, 25, 180, 70)];
         [label setText:@"lab"];
         [self.myScrollView addSubview:label];
-        yPosition += 250;
+        yPosition += 100;
         
     }
     [self.myScrollView setContentSize:CGSizeMake(yPosition,self.myScrollView.frame.size.width)];
-    //[self.view addSubview:self.myScrollView];
+    [self.view addSubview:self.myScrollView];
 }
 
 @end
