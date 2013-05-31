@@ -78,7 +78,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="EWw-Nz-cLR" kind="push" id="hae-DZ-ZHZ"/>
+                                    <segue destination="EWw-Nz-cLR" kind="push" identifier="FourSquareWebSegue" id="hae-DZ-ZHZ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="chopstickBowl.jpg" id="CFl-UX-Qqj">
@@ -111,6 +111,16 @@
                     <view key="view" contentMode="scaleToFill" id="P2v-rG-tL7">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="Bsn-B0-2jy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vyY-4P-SSf" id="Mkg-MQ-9mF"/>
+                                </connections>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="B1u-Mo-5ce"/>

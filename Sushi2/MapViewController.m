@@ -198,6 +198,29 @@
 	// Do any additional setup after loading the view.
 }
 
+-(void)mapView:(MKMapView*)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    
+    //    NSLog(@"HEY");
+    //[mapView selectedAnnotations][0]
+    [self performSegueWithIdentifier:@"FourSquareWebSegue" sender:self];
+    
+    //[ selectedAnnotations[0]];
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    //    BusStop *selectedBusStop = [_mapView selectedAnnotations][0];
+    //    ((BusDetailVCViewController *)segue.destinationViewController).thisBusStop = sender;
+    
+   // BusDetailVCViewController* busDetailVC = [segue destinationViewController];
+    
+    //busDetailVC.detailAnnotation = [_mapView selectedAnnotations][0];
+    
+    
+}
+
 //}
 //-(void) viewDidAppear:(BOOL)animated
 //{
