@@ -11,10 +11,16 @@
 #import "SushiType.h"
 #import "WikiDetailViewController.h"
 
+
+#import "MSTranslateAccessTokenRequester.h"
+#import "MSTranslateVendor.h"
+
 @interface WikiViewController ()
 {
     SushiType *selectedSushiType;
     WikiDetailViewController *wikiDetailViewController;
+    AddSushiViewController *addSushiDetailViewController;
+    SushiType *sushiType;
 }
 
 @property (strong, nonatomic) NSMutableArray *sushiTypeArray;
@@ -55,6 +61,8 @@
 	// Do any additional setup after loading the view.
     self.sushiTypeArray = [NSMutableArray array];
     [self createSushiDetails];
+    
+    addSushiDetailViewController.addSushiDelegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,13 +75,25 @@
 
 -(void)createSushiDetails
 {
-    //stuff
-    SushiType *sushiType = [[SushiType alloc] init];
-    sushiType.name = @"dynamite roll";
-    sushiType.japaneseName = @"ダイナマイトロール";
-    sushiType.description = @"Dynamite roll is a type of Western-style sushi. It is common in Western Canada. It usually contains a piece of prawn tempura and masago (capelin roe), with vegetables like radish sprouts, avocado and/or cucumber, as well as Japanese mayonnaise. In another variant, hamachi (yellowtail) replaces prawn tempura.";
-    sushiType.sushiLogo = [UIImage imageNamed:@"dynamiteRoll.png"];
-    [self.sushiTypeArray addObject:sushiType];
+    //https://github.com/bitmapdata/MSTranslateVendor
+    
+    sushiType = [[SushiType alloc] init];
+    [[MSTranslateAccessTokenRequester sharedRequester] requestSynchronousAccessToken:CLIENT_ID clientSecret:CLIENT_SECRET];
+    MSTranslateVendor *vendor = [[MSTranslateVendor alloc] init];
+    [vendor requestTranslate:@"pinapple roll" from:@"en" to:@"de" blockWithSuccess:
+     ^(NSString *translatedText)
+     {
+         NSLog(@"translatedText: %@", translatedText);
+         sushiType.name = @"dynamite roll";
+         sushiType.japaneseName = translatedText;
+         sushiType.sushiLogo = [UIImage imageNamed:@"dynamiteRoll.png"];
+         [self.sushiTypeArray addObject:sushiType];
+         [self.tableView reloadData];
+     }
+                     failure:^(NSError *error)
+     {
+         NSLog(@"error_translate: %@", error);
+     }];
     
     sushiType = [[SushiType alloc] init];
     sushiType.name = @"california roll";
@@ -82,9 +102,23 @@
     sushiType.sushiLogo = [UIImage imageNamed:@"dynamiteRoll.png"];
     [self.sushiTypeArray addObject:sushiType];
     
-    NSLog(@"%@", self.sushiTypeArray);
+    sushiType = [[SushiType alloc] init];
+    sushiType.name = @"philadelphia roll";
+    sushiType.japaneseName = @"フィラデルフィアロール";
+    sushiType.description = @"The California roll is a maki-zushi, a kind of sushi roll, usually made inside-out, containing cucumber, crab meat or imitation crab, and avocado. In some countries it is made with mango or banana instead of avocado. Sometimes crab salad is substituted for the crab stick, and often the outer layer of rice (in an inside-out roll) is sprinkled with toasted sesame seeds, tobiko or masago.";
+    sushiType.sushiLogo = [UIImage imageNamed:@"dynamiteRoll.png"];
+    [self.sushiTypeArray addObject:sushiType];
     
-//    [self.tableView reloadData];
+    sushiType = [[SushiType alloc] init];
+    sushiType.name = @"spider roll";
+    sushiType.japaneseName = @"スパイダーロール";
+    sushiType.description = @"The California roll is a maki-zushi, a kind of sushi roll, usually made inside-out, containing cucumber, crab meat or imitation crab, and avocado. In some countries it is made with mango or banana instead of avocado. Sometimes crab salad is substituted for the crab stick, and often the outer layer of rice (in an inside-out roll) is sprinkled with toasted sesame seeds, tobiko or masago.";
+    sushiType.sushiLogo = [UIImage imageNamed:@"dynamiteRoll.png"];
+    [self.sushiTypeArray addObject:sushiType];
+    
+    //NSLog(@"%@", self.sushiTypeArray);
+    
+//    
 }
 
 #pragma mark UITableViewDataSourceMethods
@@ -117,6 +151,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+}
+
+-(void) addName: (NSString*) name
+ addDescription: (NSString*) description
+       addImage: (UIImage*) image
+{
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+    sushiType = [[SushiType alloc] init];
+    sushiType.name = name;
+    sushiType.japaneseName = @"カリフォルニアロール";
+    sushiType.description = description;
+    sushiType.sushiLogo = image;
+    [self.sushiTypeArray addObject:sushiType];
 }
 
 @end

@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddSushiDelegate.h"
+#import "AddSushiViewController.h"
 
 
-@interface WikiViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface WikiViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, AddSushiDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addSushi;
+
 
 @end
