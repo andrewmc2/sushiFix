@@ -15,6 +15,8 @@
 		9E593173175901360026246A /* NSMutableURLRequest+WebServiceExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E59316B175901360026246A /* NSMutableURLRequest+WebServiceExtend.m */; };
 		9E593174175901360026246A /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E59316E175901360026246A /* NSString+Extend.m */; };
 		9E593175175901360026246A /* NSXMLParser+Taged.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E593170175901360026246A /* NSXMLParser+Taged.m */; };
+		9E59317817590CC90026246A /* AddSushiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E59317717590CC90026246A /* AddSushiViewController.m */; };
+		9E59317B1759107B0026246A /* AddSushiCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E59317A1759107B0026246A /* AddSushiCustomCell.m */; };
 		9E764E59175667AC00FEB118 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E764E58175667AC00FEB118 /* UIKit.framework */; };
 		9E764E5B175667AC00FEB118 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E764E5A175667AC00FEB118 /* Foundation.framework */; };
 		9E764E5D175667AC00FEB118 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E764E5C175667AC00FEB118 /* CoreGraphics.framework */; };
@@ -58,6 +60,11 @@
 		9E59316E175901360026246A /* NSString+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extend.m"; sourceTree = "<group>"; };
 		9E59316F175901360026246A /* NSXMLParser+Taged.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXMLParser+Taged.h"; sourceTree = "<group>"; };
 		9E593170175901360026246A /* NSXMLParser+Taged.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXMLParser+Taged.m"; sourceTree = "<group>"; };
+		9E59317617590CC80026246A /* AddSushiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSushiViewController.h; sourceTree = "<group>"; };
+		9E59317717590CC90026246A /* AddSushiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSushiViewController.m; sourceTree = "<group>"; };
+		9E5931791759107B0026246A /* AddSushiCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSushiCustomCell.h; sourceTree = "<group>"; };
+		9E59317A1759107B0026246A /* AddSushiCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSushiCustomCell.m; sourceTree = "<group>"; };
+		9E59317C175923990026246A /* AddSushiDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddSushiDelegate.h; sourceTree = "<group>"; };
 		9E764E55175667AC00FEB118 /* Sushi2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sushi2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E764E58175667AC00FEB118 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9E764E5A175667AC00FEB118 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -176,6 +183,11 @@
 				9E764E7F17566C6400FEB118 /* NearViewController.m */,
 				9E764E8117566C6D00FEB118 /* WikiViewController.h */,
 				9E764E8217566C6D00FEB118 /* WikiViewController.m */,
+				9E59317617590CC80026246A /* AddSushiViewController.h */,
+				9E59317717590CC90026246A /* AddSushiViewController.m */,
+				9E59317C175923990026246A /* AddSushiDelegate.h */,
+				9E5931791759107B0026246A /* AddSushiCustomCell.h */,
+				9E59317A1759107B0026246A /* AddSushiCustomCell.m */,
 				9E2C2ED417585FCC0055F1D5 /* NSString+StripHTMLTags.h */,
 				9E2C2ED517585FCC0055F1D5 /* NSString+StripHTMLTags.m */,
 				9E764E871756932200FEB118 /* WikiDetailViewController.h */,
@@ -296,6 +308,8 @@
 				9E593173175901360026246A /* NSMutableURLRequest+WebServiceExtend.m in Sources */,
 				9E593174175901360026246A /* NSString+Extend.m in Sources */,
 				9E593175175901360026246A /* NSXMLParser+Taged.m in Sources */,
+				9E59317817590CC90026246A /* AddSushiViewController.m in Sources */,
+				9E59317B1759107B0026246A /* AddSushiCustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

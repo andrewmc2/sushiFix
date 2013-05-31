@@ -11,6 +11,7 @@
 #import "SushiType.h"
 #import "WikiDetailViewController.h"
 
+
 #import "MSTranslateAccessTokenRequester.h"
 #import "MSTranslateVendor.h"
 
@@ -18,6 +19,8 @@
 {
     SushiType *selectedSushiType;
     WikiDetailViewController *wikiDetailViewController;
+    AddSushiViewController *addSushiDetailViewController;
+    SushiType *sushiType;
 }
 
 @property (strong, nonatomic) NSMutableArray *sushiTypeArray;
@@ -59,7 +62,7 @@
     self.sushiTypeArray = [NSMutableArray array];
     [self createSushiDetails];
     
-    
+    addSushiDetailViewController.addSushiDelegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,7 +75,9 @@
 
 -(void)createSushiDetails
 {
-    SushiType *sushiType = [[SushiType alloc] init];
+    //https://github.com/bitmapdata/MSTranslateVendor
+    
+    sushiType = [[SushiType alloc] init];
     [[MSTranslateAccessTokenRequester sharedRequester] requestSynchronousAccessToken:CLIENT_ID clientSecret:CLIENT_SECRET];
     MSTranslateVendor *vendor = [[MSTranslateVendor alloc] init];
     [vendor requestTranslate:@"pinapple roll" from:@"en" to:@"de" blockWithSuccess:
@@ -146,6 +151,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+}
+
+-(void) addName: (NSString*) name
+ addDescription: (NSString*) description
+       addImage: (UIImage*) image
+{
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+    sushiType = [[SushiType alloc] init];
+    sushiType.name = name;
+    sushiType.japaneseName = @"カリフォルニアロール";
+    sushiType.description = description;
+    sushiType.sushiLogo = image;
+    [self.sushiTypeArray addObject:sushiType];
 }
 
 @end
