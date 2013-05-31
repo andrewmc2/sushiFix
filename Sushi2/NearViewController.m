@@ -35,15 +35,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-<<<<<<< HEAD
-    NSLog(@"%@", [itemArray objectAtIndex:4]);
-    
-
-=======
-     NSLog(@"%@", [itemArray objectAtIndex:4]);
-    
-    
->>>>>>> 82db53ec864043a3a12550cea5252a922de8d705
     [self StartStandardLocationServices];
 
     self.needle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chopstickBowl.jpg"]];

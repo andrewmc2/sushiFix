@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "SushiType.h"
+#import "NSString+StripHTMLTags.h"
 
-@interface WikiDetailViewController : UIViewController
+@interface WikiDetailViewController : UIViewController  <UICollectionViewDataSource, UICollectionViewDelegate, UIWebViewDelegate>
 
 @property (strong, nonatomic) SushiType *selectedSushiType;
 
 @property (weak, nonatomic) IBOutlet UILabel *sushiName;
 @property (weak, nonatomic) IBOutlet UITextView *wikiText;
-@property (weak, nonatomic) IBOutlet UIImageView *flickrImage;
 
-@property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end

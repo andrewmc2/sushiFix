@@ -82,7 +82,21 @@
     sushiType.sushiLogo = [UIImage imageNamed:@"dynamiteRoll.png"];
     [self.sushiTypeArray addObject:sushiType];
     
-    NSLog(@"%@", self.sushiTypeArray);
+    sushiType = [[SushiType alloc] init];
+    sushiType.name = @"philadelphia roll";
+    sushiType.japaneseName = @"フィラデルフィアロール";
+    sushiType.description = @"The California roll is a maki-zushi, a kind of sushi roll, usually made inside-out, containing cucumber, crab meat or imitation crab, and avocado. In some countries it is made with mango or banana instead of avocado. Sometimes crab salad is substituted for the crab stick, and often the outer layer of rice (in an inside-out roll) is sprinkled with toasted sesame seeds, tobiko or masago.";
+    sushiType.sushiLogo = [UIImage imageNamed:@"dynamiteRoll.png"];
+    [self.sushiTypeArray addObject:sushiType];
+    
+    sushiType = [[SushiType alloc] init];
+    sushiType.name = @"spider roll";
+    sushiType.japaneseName = @"スパイダーロール";
+    sushiType.description = @"The California roll is a maki-zushi, a kind of sushi roll, usually made inside-out, containing cucumber, crab meat or imitation crab, and avocado. In some countries it is made with mango or banana instead of avocado. Sometimes crab salad is substituted for the crab stick, and often the outer layer of rice (in an inside-out roll) is sprinkled with toasted sesame seeds, tobiko or masago.";
+    sushiType.sushiLogo = [UIImage imageNamed:@"dynamiteRoll.png"];
+    [self.sushiTypeArray addObject:sushiType];
+    
+    //NSLog(@"%@", self.sushiTypeArray);
     
 //    [self.tableView reloadData];
 }

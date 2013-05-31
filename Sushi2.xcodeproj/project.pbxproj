@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E2C2ED11757F21A0055F1D5 /* SushiCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C2ED01757F21A0055F1D5 /* SushiCollectionViewCell.m */; };
+		9E2C2ED31758508E0055F1D5 /* japWood.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2C2ED21758508E0055F1D5 /* japWood.png */; };
+		9E2C2ED617585FCC0055F1D5 /* NSString+StripHTMLTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C2ED517585FCC0055F1D5 /* NSString+StripHTMLTags.m */; };
 		9E764E59175667AC00FEB118 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E764E58175667AC00FEB118 /* UIKit.framework */; };
 		9E764E5B175667AC00FEB118 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E764E5A175667AC00FEB118 /* Foundation.framework */; };
 		9E764E5D175667AC00FEB118 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E764E5C175667AC00FEB118 /* CoreGraphics.framework */; };
@@ -34,6 +37,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E2C2ECF1757F21A0055F1D5 /* SushiCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SushiCollectionViewCell.h; sourceTree = "<group>"; };
+		9E2C2ED01757F21A0055F1D5 /* SushiCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SushiCollectionViewCell.m; sourceTree = "<group>"; };
+		9E2C2ED21758508E0055F1D5 /* japWood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = japWood.png; sourceTree = "<group>"; };
+		9E2C2ED417585FCC0055F1D5 /* NSString+StripHTMLTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StripHTMLTags.h"; sourceTree = "<group>"; };
+		9E2C2ED517585FCC0055F1D5 /* NSString+StripHTMLTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StripHTMLTags.m"; sourceTree = "<group>"; };
 		9E764E55175667AC00FEB118 /* Sushi2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sushi2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E764E58175667AC00FEB118 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9E764E5A175667AC00FEB118 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -134,10 +142,14 @@
 				9E764E7F17566C6400FEB118 /* NearViewController.m */,
 				9E764E8117566C6D00FEB118 /* WikiViewController.h */,
 				9E764E8217566C6D00FEB118 /* WikiViewController.m */,
+				9E2C2ED417585FCC0055F1D5 /* NSString+StripHTMLTags.h */,
+				9E2C2ED517585FCC0055F1D5 /* NSString+StripHTMLTags.m */,
 				9E764E871756932200FEB118 /* WikiDetailViewController.h */,
 				9E764E881756932200FEB118 /* WikiDetailViewController.m */,
 				9E764E8417568F1F00FEB118 /* SushiTypeTableCell.h */,
 				9E764E8517568F1F00FEB118 /* SushiTypeTableCell.m */,
+				9E2C2ECF1757F21A0055F1D5 /* SushiCollectionViewCell.h */,
+				9E2C2ED01757F21A0055F1D5 /* SushiCollectionViewCell.m */,
 				9E764E8A1756983300FEB118 /* SushiType.h */,
 				9E764E8B1756983300FEB118 /* SushiType.m */,
 				9E764E5F175667AC00FEB118 /* Supporting Files */,
@@ -148,6 +160,7 @@
 		9E764E5F175667AC00FEB118 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9E2C2ED21758508E0055F1D5 /* japWood.png */,
 				DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */,
 				C72E9BDA17571486007BFFF3 /* chopstickBowl.jpg */,
 				9E764E8D17569B8C00FEB118 /* dynamiteRoll.png */,
@@ -221,6 +234,7 @@
 				DD657FE41756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg in Resources */,
 				9E764E8E17569B8C00FEB118 /* dynamiteRoll.png in Resources */,
 				C72E9BDB17571486007BFFF3 /* chopstickBowl.jpg in Resources */,
+				9E2C2ED31758508E0055F1D5 /* japWood.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +254,8 @@
 				9E764E8617568F1F00FEB118 /* SushiTypeTableCell.m in Sources */,
 				9E764E891756932200FEB118 /* WikiDetailViewController.m in Sources */,
 				9E764E8C1756983300FEB118 /* SushiType.m in Sources */,
+				9E2C2ED11757F21A0055F1D5 /* SushiCollectionViewCell.m in Sources */,
+				9E2C2ED617585FCC0055F1D5 /* NSString+StripHTMLTags.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
