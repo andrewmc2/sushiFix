@@ -158,7 +158,6 @@
  addDescription: (NSString*) description
        addImage: (UIImage*) image
 {
-    addSushiDetailViewController.addSushiDelegate = self;
     NSLog(@"%@",NSStringFromSelector(_cmd));
     sushiType = [[SushiType alloc] init];
     sushiType.name = name;
@@ -166,6 +165,7 @@
     sushiType.description = description;
     sushiType.sushiLogo = image;
     [self.sushiTypeArray addObject:sushiType];
+    [self.tableView reloadData];
 }
 
 @end
