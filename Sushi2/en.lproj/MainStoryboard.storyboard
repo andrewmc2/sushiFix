@@ -377,7 +377,7 @@
                     <navigationItem key="navigationItem" id="h0m-bs-mhf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f24-0w-BJm">
                             <connections>
-                                <segue destination="pe8-xH-pLF" kind="push" id="TDh-0o-uJs"/>
+                                <segue destination="pe8-xH-pLF" kind="push" identifier="addSushi" id="TDh-0o-uJs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

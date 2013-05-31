@@ -39,11 +39,10 @@
         [wikiDetailViewController setSelectedSushiType:indexSushi];
     }
     
-    //    if ([segue.identifier isEqualToString:@"viewContact"]) {
-//        viewContactViewController = [segue destinationViewController];
-//        Contact *indexContact = [self.contactArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
-//        [viewContactViewController setSelectedContact:indexContact];
-//    }
+    if ([segue.identifier isEqualToString:@"addSushi"]) {
+        addSushiDetailViewController = [segue destinationViewController];
+        addSushiDetailViewController.addSushiDelegate = self;
+    }
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -62,7 +61,7 @@
     self.sushiTypeArray = [NSMutableArray array];
     [self createSushiDetails];
     
-    addSushiDetailViewController.addSushiDelegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -153,10 +152,13 @@
 {
 }
 
+#pragma mark delegate method
+
 -(void) addName: (NSString*) name
  addDescription: (NSString*) description
        addImage: (UIImage*) image
 {
+    addSushiDetailViewController.addSushiDelegate = self;
     NSLog(@"%@",NSStringFromSelector(_cmd));
     sushiType = [[SushiType alloc] init];
     sushiType.name = name;
