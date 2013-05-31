@@ -7,14 +7,77 @@
 //
 
 #import "AppDelegate.h"
-
+//@interface AppDelegate ()
+//@property (strong, nonatomic)CLLocationManager*locationManager;
+//@property (nonatomic, strong) NSString * strLatitude;
+//@property (nonatomic, strong) NSString * strLongitude;
+//
+//@end
 @implementation AppDelegate
+
+//CLLocation* location;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //    [self StartStandardLocationServices];
     // Override point for customization after application launch.
     return YES;
 }
+//-(void) StartStandardLocationServices
+//{
+//    if (nil == self.locationManager)
+//    {
+//        self.locationManager = [[CLLocationManager alloc] init];
+//    
+//    self.locationManager.delegate = self;
+//    self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+//    
+//    // Set a movement threshold for new events.
+//    self.locationManager.distanceFilter = 500;
+//    
+//    [self.locationManager startUpdatingLocation];
+//    
+//    if([CLLocationManager headingAvailable]) {
+//        [self.locationManager startUpdatingHeading];
+//    } else {
+//        NSLog(@"No Compass -- You're lost");
+//    }
+//    
+//    float latitude = location.coordinate.latitude;
+//    self.strLatitude = [NSString stringWithFormat:@"%f",latitude];
+//    float longitude = location.coordinate.longitude;
+//    self.strLongitude = [NSString stringWithFormat:@"%f", longitude];
+//    }
+//}
+
+//-(NSString*)ReturnLatLongforURL
+//{
+//    
+//    NSString *CurrentCoord = [NSString stringWithFormat:@"%@,%@", self.strLatitude, self.strLongitude];
+//  //  NSString *str = @"lat=";
+//    //str = [str stringByAppendingString:strLatitude];
+//    //str = [str stringByAppendingString:@"&long="];
+//    //str = [str stringByAppendingString:strLongitude];
+//    
+//    return CurrentCoord;
+//}
+
+////- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+//
+//    // If it's a relatively recent event, turn off updates to save power
+//    location = [locations lastObject];
+//    NSDate* eventDate = location.timestamp;
+//    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+//    //if (abs(howRecent) < 15.0) {
+//        
+//        // If the event is recent, do something with it.
+//        NSLog(@"latitude %+.6f, longitude %+.6f\n", location.coordinate.latitude, location.coordinate.longitude);
+//    //}
+//    //HoldLocation = location
+//}
+
+
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+@interface AppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
+-(void) StartStandardLocationServices;
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
 @property (strong, nonatomic) UIWindow *window;
 
 @end
+
+
+
+//CLLocation* location;
+//CLLocation * HoldLocation;

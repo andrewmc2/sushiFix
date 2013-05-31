@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "MapViewController.h"
+#import "AppDelegate.h"
 
 @interface NearViewController : UIViewController <CLLocationManagerDelegate>
 
 @end
+

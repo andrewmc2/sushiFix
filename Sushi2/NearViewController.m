@@ -8,10 +8,12 @@
 
 #import "NearViewController.h"
 #import <MapKit/MapKit.h>
+#import "AppDelegate.h"
 
 @interface NearViewController ()
 {
     CLLocationManager *locationManager;
+    
 }
 
 @property (strong, nonatomic) IBOutlet UIImageView *needle;
@@ -35,16 +37,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-<<<<<<< HEAD
+
     NSLog(@"%@", [itemArray objectAtIndex:4]);
     
 
-=======
-     NSLog(@"%@", [itemArray objectAtIndex:4]);
-    
-    
->>>>>>> 82db53ec864043a3a12550cea5252a922de8d705
-    [self StartStandardLocationServices];
+    //[self StartStandardLocationServices];
 
     self.needle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chopstickBowl.jpg"]];
     self.needle.frame = CGRectMake(10, 10, 70, 70);
@@ -74,39 +71,7 @@
 }
 
 
--(void) StartStandardLocationServices
-{
-    if (nil == locationManager)
-    locationManager = [[CLLocationManager alloc] init];
-    
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
-    
-    // Set a movement threshold for new events.
-    locationManager.distanceFilter = 500;
-    
-    [locationManager startUpdatingLocation];
 
-    if([CLLocationManager headingAvailable]) {
-        [locationManager startUpdatingHeading];
-    } else {
-        NSLog(@"No Compass -- You're lost");
-    }
-}
-
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    
-    // If it's a relatively recent event, turn off updates to save power
-    CLLocation* location = [locations lastObject];
-    NSDate* eventDate = location.timestamp;
-    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
-    if (abs(howRecent) < 15.0) {
-    
-    // If the event is recent, do something with it.
-    NSLog(@"latitude %+.6f, longitude %+.6f\n", location.coordinate.latitude, location.coordinate.longitude);
-    }
-}
 
 
 -(void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
