@@ -69,6 +69,8 @@
     return 1;
 }
 
+#pragma mark delegate method
+
 - (IBAction)confirmEntry:(id)sender {
     NSLog(@"%@",NSStringFromSelector(_cmd));
     NSString *sushiNameString = ((AddSushiCustomCell*)([self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]])).cellTextField.text;

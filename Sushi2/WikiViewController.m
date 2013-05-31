@@ -62,7 +62,7 @@
     self.sushiTypeArray = [NSMutableArray array];
     [self createSushiDetails];
     
-    addSushiDetailViewController.addSushiDelegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -153,10 +153,13 @@
 {
 }
 
+#pragma mark delegate method
+
 -(void) addName: (NSString*) name
  addDescription: (NSString*) description
        addImage: (UIImage*) image
 {
+    addSushiDetailViewController.addSushiDelegate = self;
     NSLog(@"%@",NSStringFromSelector(_cmd));
     sushiType = [[SushiType alloc] init];
     sushiType.name = name;
