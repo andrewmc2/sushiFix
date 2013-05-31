@@ -25,7 +25,6 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 - (IBAction)logArray:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIImageView *randomImage;
 
 @property (strong, nonatomic) NSOperationQueue *backgroundOperationQueue;
 

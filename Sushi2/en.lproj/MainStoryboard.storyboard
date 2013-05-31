@@ -367,7 +367,7 @@
                     <navigationItem key="navigationItem" id="h0m-bs-mhf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f24-0w-BJm">
                             <connections>
-                                <segue destination="pe8-xH-pLF" kind="push" id="TDh-0o-uJs"/>
+                                <segue destination="pe8-xH-pLF" kind="push" identifier="addSushi" id="TDh-0o-uJs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -462,83 +462,6 @@
         <image name="1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg" width="388" height="290"/>
         <image name="chopstickBowl.jpg" width="449" height="299"/>
     </resources>
-    <classes>
-        <class className="AddSushiCustomCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSushiCustomCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="cellName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cellTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="AddSushiViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSushiViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="confirmEntry:"/>
-                <relationship kind="outlet" name="addPic" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="addedImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="NearViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NearViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="nearestVenueAddressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nearestVenueLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="needle" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="SushiCollectionViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SushiCollectionViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="sushiImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="sushiLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SushiTypeTableCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SushiTypeTableCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="japaneseSushiName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sushiImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="sushiName" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-        <class className="WikiDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="logArray:"/>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-                <relationship kind="outlet" name="randomImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="sushiName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="wikiText" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="WikiViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="addSushi" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
