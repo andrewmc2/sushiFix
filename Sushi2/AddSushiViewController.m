@@ -80,4 +80,9 @@
                     addDescription:sushiDescriptionString
                           addImage:[UIImage imageNamed:@"chopstickBowl.jpg"]];
 }
+
+#pragma mark add picture 
+
+
+
 @end
