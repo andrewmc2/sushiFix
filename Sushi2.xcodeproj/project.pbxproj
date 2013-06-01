@@ -42,6 +42,8 @@
 		DD657FE91756ADFF00A64ED6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD657FE81756ADFE00A64ED6 /* CoreLocation.framework */; };
 		DD657FEB1756AE6400A64ED6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD657FEA1756AE6400A64ED6 /* MapKit.framework */; };
 		DD8F3819175945AB00D0EED0 /* SushiFourSquareWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8F3818175945AB00D0EED0 /* SushiFourSquareWebVC.m */; };
+		DDEBF72B175AA7E50088172F /* SushiVenueAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEBF72A175AA7E50088172F /* SushiVenueAnnotation.m */; };
+		DDEBF72D175AAABD0088172F /* mobilemakers.png in Resources */ = {isa = PBXBuildFile; fileRef = DDEBF72C175AAABD0088172F /* mobilemakers.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +105,9 @@
 		DD657FEA1756AE6400A64ED6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DD8F3817175945AB00D0EED0 /* SushiFourSquareWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SushiFourSquareWebVC.h; sourceTree = "<group>"; };
 		DD8F3818175945AB00D0EED0 /* SushiFourSquareWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SushiFourSquareWebVC.m; sourceTree = "<group>"; };
+		DDEBF729175AA7E50088172F /* SushiVenueAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SushiVenueAnnotation.h; sourceTree = "<group>"; };
+		DDEBF72A175AA7E50088172F /* SushiVenueAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SushiVenueAnnotation.m; sourceTree = "<group>"; };
+		DDEBF72C175AAABD0088172F /* mobilemakers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mobilemakers.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +183,12 @@
 				9E764E67175667AC00FEB118 /* AppDelegate.h */,
 				9E764E68175667AC00FEB118 /* AppDelegate.m */,
 				9E764E70175667AC00FEB118 /* MainStoryboard.storyboard */,
+				9E2C2ECF1757F21A0055F1D5 /* SushiCollectionViewCell.h */,
 				9E764E7B17566C5A00FEB118 /* MapViewController.h */,
 				9E764E7C17566C5A00FEB118 /* MapViewController.m */,
+				DDEBF729175AA7E50088172F /* SushiVenueAnnotation.h */,
+				DDEBF72A175AA7E50088172F /* SushiVenueAnnotation.m */,
+				DDEBF72C175AAABD0088172F /* mobilemakers.png */,
 				DD8F3817175945AB00D0EED0 /* SushiFourSquareWebVC.h */,
 				DD8F3818175945AB00D0EED0 /* SushiFourSquareWebVC.m */,
 				DD657FE517569CBA00A64ED6 /* VenueObject.h */,
@@ -199,7 +208,6 @@
 				9E764E881756932200FEB118 /* WikiDetailViewController.m */,
 				9E764E8417568F1F00FEB118 /* SushiTypeTableCell.h */,
 				9E764E8517568F1F00FEB118 /* SushiTypeTableCell.m */,
-				9E2C2ECF1757F21A0055F1D5 /* SushiCollectionViewCell.h */,
 				9E2C2ED01757F21A0055F1D5 /* SushiCollectionViewCell.m */,
 				9E764E8A1756983300FEB118 /* SushiType.h */,
 				9E764E8B1756983300FEB118 /* SushiType.m */,
@@ -287,6 +295,7 @@
 				9E764E8E17569B8C00FEB118 /* dynamiteRoll.png in Resources */,
 				C72E9BDB17571486007BFFF3 /* chopstickBowl.jpg in Resources */,
 				9E2C2ED31758508E0055F1D5 /* japWood.png in Resources */,
+				DDEBF72D175AAABD0088172F /* mobilemakers.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +325,7 @@
 				9E59317817590CC90026246A /* AddSushiViewController.m in Sources */,
 				9E59317B1759107B0026246A /* AddSushiCustomCell.m in Sources */,
 				DD8F3819175945AB00D0EED0 /* SushiFourSquareWebVC.m in Sources */,
+				DDEBF72B175AA7E50088172F /* SushiVenueAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

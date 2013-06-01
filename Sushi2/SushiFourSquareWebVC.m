@@ -7,12 +7,16 @@
 //
 
 #import "SushiFourSquareWebVC.h"
+#import "SushiVenueAnnotation.h"
+
 
 @interface SushiFourSquareWebVC ()
 
 @end
 
+
 @implementation SushiFourSquareWebVC
+@synthesize thisVenueURL;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +30,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+  //  self.venue
+    
+    NSURL *url = [NSURL URLWithString:thisVenueURL];
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    [self.FourSquarePage loadRequest:requestObj];
+    
 	// Do any additional setup after loading the view.
 }
 

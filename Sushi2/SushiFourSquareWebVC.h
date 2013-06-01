@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface SushiFourSquareWebVC : UIViewController
+@interface SushiFourSquareWebVC : UIViewController<MKAnnotation>
+
+@property (strong, nonatomic) IBOutlet UIWebView *FourSquarePage;
+
+@property NSString * thisVenueURL;
+@property id MKAnnotation;
+@property(strong, nonatomic) NSDictionary *thisVenueDictionary;
+
+
 
 @end

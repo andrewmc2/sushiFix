@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MapViewController.h"
 //@interface AppDelegate ()
 //@property (strong, nonatomic)CLLocationManager*locationManager;
 //@property (nonatomic, strong) NSString * strLatitude;
@@ -21,34 +22,38 @@
 {
     //    [self StartStandardLocationServices];
     // Override point for customization after application launch.
+    [self startStandardLocationServices];
+    
     return YES;
 }
-//-(void) StartStandardLocationServices
-//{
-//    if (nil == self.locationManager)
-//    {
-//        self.locationManager = [[CLLocationManager alloc] init];
-//    
-//    self.locationManager.delegate = self;
-//    self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
-//    
-//    // Set a movement threshold for new events.
-//    self.locationManager.distanceFilter = 500;
-//    
-//    [self.locationManager startUpdatingLocation];
-//    
-//    if([CLLocationManager headingAvailable]) {
-//        [self.locationManager startUpdatingHeading];
-//    } else {
-//        NSLog(@"No Compass -- You're lost");
-//    }
-//    
-//    float latitude = location.coordinate.latitude;
-//    self.strLatitude = [NSString stringWithFormat:@"%f",latitude];
-//    float longitude = location.coordinate.longitude;
-//    self.strLongitude = [NSString stringWithFormat:@"%f", longitude];
-//    }
-//}
+
+-(void) startStandardLocationServices
+{
+    if (nil == self.locationManager)
+    {
+        self.locationManager = [[CLLocationManager alloc] init];
+        
+        self.locationManager.delegate = self;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+        
+        // Set a movement threshold for new events.
+        self.locationManager.distanceFilter = 500;
+        
+        [self.locationManager startUpdatingLocation];
+        
+        if([CLLocationManager headingAvailable]) {
+            [self.locationManager startUpdatingHeading];
+        } else {
+            NSLog(@"No Compass -- You're lost");
+        }
+        
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    self.location = [locations objectAtIndex:0];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"locationUpdated" object:nil];
+}
 
 //-(NSString*)ReturnLatLongforURL
 //{

@@ -11,13 +11,12 @@
 #import <MapKit/MapKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
--(void) StartStandardLocationServices;
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
+
+- (void) startStandardLocationServices;
+- (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations;
+
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) CLLocation *location;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
-
-
-
-//CLLocation* location;
-//CLLocation * HoldLocation;
