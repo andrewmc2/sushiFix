@@ -40,6 +40,7 @@
 		C72E9BA41756A443007BFFF3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72E9BA31756A443007BFFF3 /* MapKit.framework */; };
 		C72E9BA61756A44D007BFFF3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72E9BA51756A44D007BFFF3 /* CoreLocation.framework */; };
 		C72E9BDB17571486007BFFF3 /* chopstickBowl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C72E9BDA17571486007BFFF3 /* chopstickBowl.jpg */; };
+		C7C69AC6175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C69AC5175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.m */; };
 		DD657FE41756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */; };
 		DD657FE717569CBA00A64ED6 /* VenueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DD657FE617569CBA00A64ED6 /* VenueObject.m */; };
 		DD657FE91756ADFF00A64ED6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD657FE81756ADFE00A64ED6 /* CoreLocation.framework */; };
@@ -104,6 +105,8 @@
 		C72E9BA31756A443007BFFF3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C72E9BA51756A44D007BFFF3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C72E9BDA17571486007BFFF3 /* chopstickBowl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chopstickBowl.jpg; sourceTree = "<group>"; };
+		C7C69AC4175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearVenue4SqWebVCViewController.h; sourceTree = "<group>"; };
+		C7C69AC5175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearVenue4SqWebVCViewController.m; sourceTree = "<group>"; };
 		DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg"; sourceTree = "<group>"; };
 		DD657FE517569CBA00A64ED6 /* VenueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueObject.h; sourceTree = "<group>"; };
 		DD657FE617569CBA00A64ED6 /* VenueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueObject.m; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 				9E2C2ECF1757F21A0055F1D5 /* SushiCollectionViewCell.h */,
 				9E764E7B17566C5A00FEB118 /* MapViewController.h */,
 				9E764E7C17566C5A00FEB118 /* MapViewController.m */,
+				C7C69AC4175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.h */,
+				C7C69AC5175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.m */,
 				DDEBF729175AA7E50088172F /* SushiVenueAnnotation.h */,
 				DDEBF72A175AA7E50088172F /* SushiVenueAnnotation.m */,
 				DDEBF72C175AAABD0088172F /* mobilemakers.png */,
@@ -338,6 +343,7 @@
 				9E59317B1759107B0026246A /* AddSushiCustomCell.m in Sources */,
 				DD8F3819175945AB00D0EED0 /* SushiFourSquareWebVC.m in Sources */,
 				DDEBF72B175AA7E50088172F /* SushiVenueAnnotation.m in Sources */,
+				C7C69AC6175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
