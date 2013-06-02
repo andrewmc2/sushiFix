@@ -11,9 +11,22 @@
 #import "SushiType.h"
 #import "WikiDetailViewController.h"
 
-
+//translate
 #import "MSTranslateAccessTokenRequester.h"
 #import "MSTranslateVendor.h"
+
+//flatUI
+#import "UIColor+FlatUI.h"
+
+#import "UITabBar+FlatUI.h"
+#import "UINavigationBar+FlatUI.h"
+#import "FUIButton.h"
+#import "FUISwitch.h"
+#import "UIFont+FlatUI.h"
+#import "FUIAlertView.h"
+#import "UIBarButtonItem+FlatUI.h"
+#import "UIProgressView+FlatUI.h"
+#import "FUISegmentedControl.h"
 
 @interface WikiViewController ()
 {
@@ -61,7 +74,10 @@
     self.sushiTypeArray = [NSMutableArray array];
     [self createSushiDetails];
     
+    //flat ui
+    self.view.backgroundColor = [UIColor cloudsColor];
     
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
 }
 
 - (void)didReceiveMemoryWarning

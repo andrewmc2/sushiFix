@@ -374,6 +374,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.98823535442352295" green="0.87450987100601196" blue="0.69803923368453979" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
                                             <outlet property="japaneseSushiName" destination="oyZ-NR-fqJ" id="zZh-Oy-mUm"/>
                                             <outlet property="sushiImage" destination="LfB-fE-2zD" id="itj-N3-ftr"/>
