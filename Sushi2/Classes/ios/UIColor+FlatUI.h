@@ -31,6 +31,11 @@
 + (UIColor *) silverColor;
 + (UIColor *) concreteColor;
 + (UIColor *) asbestosColor;
++ (UIColor *) japanesePinkColor;
++ (UIColor *) japaneseSalmonColor;
++ (UIColor *) japaneseCreamColor;
++ (UIColor *) japaneseGreenColor;
++ (UIColor *) japaneseTurqoiseColor;
 
 + (UIColor *) blendedColorWithForegroundColor:(UIColor *)foregroundColor
                               backgroundColor:(UIColor *)backgroundColor

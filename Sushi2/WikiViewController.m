@@ -27,6 +27,7 @@
 #import "UIBarButtonItem+FlatUI.h"
 #import "UIProgressView+FlatUI.h"
 #import "FUISegmentedControl.h"
+#import "UITabBar+FlatUI.h"
 
 @interface WikiViewController ()
 {
@@ -77,7 +78,12 @@
     //flat ui
     self.view.backgroundColor = [UIColor cloudsColor];
     
-    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor japaneseTurqoiseColor]];
+    
+    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor japaneseGreenColor]
+                                  highlightedColor:[UIColor japaneseSalmonColor]
+                                      cornerRadius:3];
+    [self.tabBarController.tabBar configureFlatTabBarWithColor:[UIColor japaneseTurqoiseColor] selectedColor:[UIColor japaneseGreenColor]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,7 +106,7 @@
     sushiType.name = @"california roll";
     sushiType.japaneseName = @"カリフォルニアロール";
     sushiType.description = @"The California roll is a maki-zushi, a kind of sushi roll, usually made inside-out, containing cucumber, crab meat or imitation crab, and avocado. In some countries it is made with mango or banana instead of avocado. Sometimes crab salad is substituted for the crab stick, and often the outer layer of rice (in an inside-out roll) is sprinkled with toasted sesame seeds, tobiko or masago.";
-    sushiType.sushiLogo = [UIImage imageNamed:@"dynamiteRoll.png"];
+    sushiType.sushiLogo = [UIImage imageNamed:@"caliRollBG.png"];
     sushiType.isNotUserCreated = YES;
     [self.sushiTypeArray addObject:sushiType];
     
@@ -108,7 +114,7 @@
     sushiType.name = @"philadelphia roll";
     sushiType.japaneseName = @"フィラデルフィアロール";
     sushiType.description = @"A Philadelphia roll is a Maki-zushi Also clasified as a Kawarizushi [2] type of sushi generally made with smoked salmon, cream cheese, and cucumber. It can also include other ingredients, such as avocado, onion, and sesame seed.";
-    sushiType.sushiLogo = [UIImage imageNamed:@"phillyRoll.jpg"];
+    sushiType.sushiLogo = [UIImage imageNamed:@"caliRollBG.png"];
     sushiType.isNotUserCreated = YES;
     [self.sushiTypeArray addObject:sushiType];
     
@@ -116,7 +122,7 @@
     sushiType.name = @"spider roll";
     sushiType.japaneseName = @"スパイダーロール";
     sushiType.description = @"Spider roll is a type of Maki sushi which includes breaded or battered deep-fried soft shell crab and other ingredients such as cucumber, avocado, daikon sprouts or lettuce, and spicy mayonnaise, rolled inside nori and sushi rice. It is often rolled as futomaki.";
-    sushiType.sushiLogo = [UIImage imageNamed:@"spiderRoll.jpg"];
+    sushiType.sushiLogo = [UIImage imageNamed:@"caliRollBG.png"];
     sushiType.isNotUserCreated = YES;
     [self.sushiTypeArray addObject:sushiType];
 }

@@ -141,44 +141,40 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="kGa-SD-VcE">
-                                <rect key="frame" x="3" y="221" width="320" height="234"/>
+                            <webView contentMode="scaleToFill" id="z9y-R7-FO3">
+                                <rect key="frame" x="-7" y="280" width="327" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N8k-Mq-sUd">
-                                <rect key="frame" x="20" y="194" width="280" height="26"/>
-                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <connections>
+                                    <outlet property="delegate" destination="1TD-Az-2h5" id="tW6-FT-bEI"/>
+                                </connections>
+                            </webView>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="iI7-aL-161">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="0.77261622809999997" blue="0.57361526559999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vYG-j7-69o">
-                                    <size key="itemSize" width="320" height="175"/>
+                                    <size key="itemSize" width="320" height="455"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="Cell" id="xFp-XX-4Fi" customClass="SushiCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="EY1-2H-rOj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <size key="customSize" width="320" height="175"/>
+                                        <size key="customSize" width="320" height="455"/>
                                         <connections>
                                             <outlet property="sushiImage" destination="EY1-2H-rOj" id="vIQ-M7-ufO"/>
                                         </connections>
@@ -189,7 +185,27 @@
                                     <outlet property="delegate" destination="1TD-Az-2h5" id="bvf-IS-3ej"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ufY-7K-IdE">
+                            <view contentMode="scaleToFill" id="ZhE-6B-Ng7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N8k-Mq-sUd">
+                                        <rect key="frame" x="20" y="7" width="280" height="26"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                        <color key="textColor" red="1" green="0.87450980389999999" blue="0.69803921570000005" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="kGa-SD-VcE">
+                                <rect key="frame" x="0.0" y="360" width="320" height="94"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.87450980389999999" blue="0.69803921570000005" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ufY-7K-IdE">
                                 <rect key="frame" x="227" y="177" width="73" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -204,14 +220,6 @@
                                     <action selector="logArray:" destination="1TD-Az-2h5" eventType="touchUpInside" id="2X8-DI-4cy"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" id="z9y-R7-FO3">
-                                <rect key="frame" x="3" y="280" width="327" height="175"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="delegate" destination="1TD-Az-2h5" id="tW6-FT-bEI"/>
-                                </connections>
-                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -223,8 +231,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="iI7-aL-161" id="xNt-wG-i1k"/>
+                        <outlet property="collectionView" destination="iI7-aL-161" id="tdL-9U-p4u"/>
                         <outlet property="sushiName" destination="N8k-Mq-sUd" id="rHC-c7-6EN"/>
+                        <outlet property="topTitle" destination="ZhE-6B-Ng7" id="eBZ-ap-HVZ"/>
                         <outlet property="webView" destination="z9y-R7-FO3" id="Mef-cw-gNS"/>
                         <outlet property="wikiText" destination="kGa-SD-VcE" id="1UY-qd-6Au"/>
                     </connections>
@@ -246,7 +255,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" rowHeight="74" id="NvA-Yv-2xf" customClass="AddSushiCustomCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="74" id="NvA-Yv-2xf" customClass="AddSushiCustomCell">
                                         <rect key="frame" x="0.0" y="46" width="320" height="76"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -280,25 +289,10 @@
                                     <outlet property="delegate" destination="pe8-xH-pLF" id="HYV-2C-gng"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="psy-4W-yuv">
-                                <rect key="frame" x="12" y="60" width="122" height="84"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="caliRollBG.png" id="psy-4W-yuv">
+                                <rect key="frame" x="0.0" y="44" width="320" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g2w-ir-VzS">
-                                <rect key="frame" x="170" y="80" width="77" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="add pic">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addPic:" destination="pe8-xH-pLF" eventType="touchUpInside" id="tBg-hb-KTR"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" id="Tqq-VU-f1D">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -317,6 +311,42 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Add picture" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wUv-Vg-Tvs">
+                                <rect key="frame" x="169" y="78" width="130" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="19"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.44705882349999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="画像を追加" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jdt-LQ-Ejp">
+                                <rect key="frame" x="186" y="116" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.44705882349999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=">" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hwJ-wA-qD8">
+                                <rect key="frame" x="293" y="98" width="42" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.44705882349999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mdu-1Y-IQ3">
+                                <rect key="frame" x="146" y="49" width="73" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomButton:" destination="pe8-xH-pLF" eventType="touchUpInside" id="Pba-7m-UND"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -328,8 +358,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addPic" destination="g2w-ir-VzS" id="SH0-wg-cMP"/>
-                        <outlet property="addedImage" destination="psy-4W-yuv" id="uDT-RO-mUI"/>
+                        <outlet property="addedImage" destination="psy-4W-yuv" id="BYy-Xp-leY"/>
                         <outlet property="tableView" destination="T5d-3f-hMO" id="fZq-Zk-wEf"/>
                     </connections>
                 </viewController>
@@ -337,7 +366,7 @@
             </objects>
             <point key="canvasLocation" x="1591" y="2068"/>
         </scene>
-        <!--Wiki View Controller-->
+        <!--Wiki View Controller - Sushi Glossary-->
         <scene sceneID="hN7-vr-Asd">
             <objects>
                 <viewController id="yE3-AY-am1" customClass="WikiViewController" sceneMemberID="viewController">
@@ -345,30 +374,34 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" id="Cyy-4L-xea">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" image="japanesePlacemat.jpg" id="gEf-5i-V3D">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="109" sectionHeaderHeight="22" sectionFooterHeight="22" id="Cyy-4L-xea">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="sushiTypeCell" rowHeight="75" id="2XB-Gj-FZg" customClass="SushiTypeTableCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="75"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="sushiTypeCell" rowHeight="109" id="2XB-Gj-FZg" customClass="SushiTypeTableCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="109"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="LfB-fE-2zD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="caliRollBG.png" id="LfB-fE-2zD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="108"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dynamite Roll" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T2z-7w-CNs">
-                                                    <rect key="frame" x="91" y="11" width="209" height="24"/>
-                                                    <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dynamite Roll" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T2z-7w-CNs">
+                                                    <rect key="frame" x="91" y="31" width="209" height="24"/>
+                                                    <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="18"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.44705882349999998" alpha="1" colorSpace="deviceRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="カリフォルニアロール" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oyZ-NR-fqJ">
-                                                    <rect key="frame" x="91" y="38" width="209" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="カリフォルニアロール" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oyZ-NR-fqJ">
+                                                    <rect key="frame" x="91" y="58" width="209" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.44705882349999998" alpha="1" colorSpace="deviceRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
@@ -391,7 +424,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="h0m-bs-mhf">
+                    <navigationItem key="navigationItem" title="Sushi Glossary" id="h0m-bs-mhf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f24-0w-BJm">
                             <connections>
                                 <segue destination="pe8-xH-pLF" kind="modal" identifier="addSushi" id="TDh-0o-uJs"/>
@@ -486,7 +519,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="caliRollBG.png" width="320" height="109"/>
         <image name="chopstickBowl.jpg" width="449" height="299"/>
+        <image name="japanesePlacemat.jpg" width="730" height="1178"/>
     </resources>
     <classes>
         <class className="AddSushiCustomCell" superclassName="UITableViewCell">
@@ -503,6 +538,7 @@
                 <relationship kind="action" name="cancelAddSushi:"/>
                 <relationship kind="action" name="confirmEntry:"/>
                 <relationship kind="action" name="doneAddingSushi:"/>
+                <relationship kind="action" name="randomButton:"/>
                 <relationship kind="outlet" name="addPic" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="addedImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
@@ -533,7 +569,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SushiCollectionViewCell.h"/>
             <relationships>
                 <relationship kind="outlet" name="sushiImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="sushiLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="SushiFourSquareWebVC" superclassName="UIViewController">
@@ -569,6 +604,7 @@
                 <relationship kind="action" name="shareToSocial:"/>
                 <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
                 <relationship kind="outlet" name="sushiName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="topTitle" candidateClass="UIView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
                 <relationship kind="outlet" name="wikiText" candidateClass="UITextView"/>
             </relationships>

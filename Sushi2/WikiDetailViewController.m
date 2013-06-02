@@ -25,8 +25,10 @@
     SLComposeViewController *slComposeViewController;
     UIActivityViewController *uiActivityViewController;
 }
-
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIView *topTitle;
+
+
 - (IBAction)logArray:(id)sender;
 
 
@@ -55,6 +57,8 @@
     [self addPictureFromFlickr];
     self.backgroundOperationQueue = [[NSOperationQueue alloc] init];
     [self.backgroundOperationQueue setMaxConcurrentOperationCount:1];
+    
+    //  self.topTitle.hidden = YES;
     
     //webview
     if (self.selectedSushiType.isNotUserCreated) {
@@ -188,5 +192,10 @@
     [self presentViewController:uiActivityViewController animated:YES completion:^{
         //stuff
     }];
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    self.topTitle.hidden = NO;
 }
 @end

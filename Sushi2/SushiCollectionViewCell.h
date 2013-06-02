@@ -11,6 +11,6 @@
 @interface SushiCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *sushiImage;
-@property (weak, nonatomic) IBOutlet UILabel *sushiLabel;
+
 
 @end

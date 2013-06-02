@@ -9,7 +9,22 @@
 #import "AddSushiViewController.h"
 #import "AddSushiCustomCell.h"
 
+//flat
+#import "UIColor+FlatUI.h"
+#import "UITabBar+FlatUI.h"
+#import "UINavigationBar+FlatUI.h"
+#import "FUIButton.h"
+#import "FUISwitch.h"
+#import "UIFont+FlatUI.h"
+#import "FUIAlertView.h"
+#import "UIBarButtonItem+FlatUI.h"
+#import "UIProgressView+FlatUI.h"
+#import "FUISegmentedControl.h"
+#import "UITableViewCell+FlatUI.h"
+
 @interface AddSushiViewController ()
+
+- (IBAction)randomButton:(id)sender;
 
 @end
 
@@ -20,6 +35,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor japaneseTurqoiseColor]];
+        NSLog(@"1");
     }
     return self;
 }
@@ -28,6 +45,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    NSLog(@"2");
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,6 +60,9 @@
 {
     NSString *identifier = @"cell";
     AddSushiCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+
+//    cell = [UITableViewCell configureFlatCellWithColor:[UIColor japaneseSalmonColor] selectedColor:[UIColor japanesePinkColor] style:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    
 //    if (cell == nil){
 //        cell = [[AddSushiCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
 //    }
@@ -127,5 +148,32 @@
 
 - (IBAction)cancelAddSushi:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [touches anyObject];
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+    
+    if ([touch view] == self.addedImage)
+    {
+        //add your code for image touch here
+        NSLog(@"addedIMage");
+        
+        UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Choose" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Picture", @"Select from Library", nil];
+        [actionSheet showInView:self.view];
+        
+        imagePicker = [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+    }
+    
+}
+- (IBAction)randomButton:(id)sender {
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Choose" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Picture", @"Select from Library", nil];
+    [actionSheet showInView:self.view];
+    
+    imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
 }
 @end

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9E2C2ED11757F21A0055F1D5 /* SushiCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C2ED01757F21A0055F1D5 /* SushiCollectionViewCell.m */; };
 		9E2C2ED31758508E0055F1D5 /* japWood.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2C2ED21758508E0055F1D5 /* japWood.png */; };
-		9E2C2ED617585FCC0055F1D5 /* NSString+StripHTMLTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C2ED517585FCC0055F1D5 /* NSString+StripHTMLTags.m */; };
 		9E50B0C1175A82E5004AFE23 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E50B0C0175A82E5004AFE23 /* Social.framework */; };
 		9E593171175901360026246A /* MSTranslateAccessTokenRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E593167175901360026246A /* MSTranslateAccessTokenRequester.m */; };
 		9E593172175901360026246A /* MSTranslateVendor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E593169175901360026246A /* MSTranslateVendor.m */; };
@@ -63,6 +62,8 @@
 		9EA34621175B0EC500728752 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EA34608175B0EC500728752 /* Lato-Light.ttf */; };
 		9EA34622175B0EC500728752 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EA34609175B0EC500728752 /* Lato-LightItalic.ttf */; };
 		9EA34623175B0EC500728752 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EA3460A175B0EC500728752 /* Lato-Regular.ttf */; };
+		9EB766C2175BD01700B8D479 /* caliRollBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EB766C1175BD01700B8D479 /* caliRollBG.png */; };
+		9EB766C4175BDB5D00B8D479 /* japanesePlacemat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9EB766C3175BDB5D00B8D479 /* japanesePlacemat.jpg */; };
 		C72E9BA41756A443007BFFF3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72E9BA31756A443007BFFF3 /* MapKit.framework */; };
 		C72E9BA61756A44D007BFFF3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72E9BA51756A44D007BFFF3 /* CoreLocation.framework */; };
 		C72E9BDB17571486007BFFF3 /* chopstickBowl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C72E9BDA17571486007BFFF3 /* chopstickBowl.jpg */; };
@@ -80,8 +81,6 @@
 		9E2C2ECF1757F21A0055F1D5 /* SushiCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SushiCollectionViewCell.h; sourceTree = "<group>"; };
 		9E2C2ED01757F21A0055F1D5 /* SushiCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SushiCollectionViewCell.m; sourceTree = "<group>"; };
 		9E2C2ED21758508E0055F1D5 /* japWood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = japWood.png; sourceTree = "<group>"; };
-		9E2C2ED417585FCC0055F1D5 /* NSString+StripHTMLTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StripHTMLTags.h"; sourceTree = "<group>"; };
-		9E2C2ED517585FCC0055F1D5 /* NSString+StripHTMLTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StripHTMLTags.m"; sourceTree = "<group>"; };
 		9E50B0C0175A82E5004AFE23 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		9E593166175901360026246A /* MSTranslateAccessTokenRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTranslateAccessTokenRequester.h; sourceTree = "<group>"; };
 		9E593167175901360026246A /* MSTranslateAccessTokenRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTranslateAccessTokenRequester.m; sourceTree = "<group>"; };
@@ -169,6 +168,8 @@
 		9EA34608175B0EC500728752 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		9EA34609175B0EC500728752 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		9EA3460A175B0EC500728752 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		9EB766C1175BD01700B8D479 /* caliRollBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caliRollBG.png; sourceTree = "<group>"; };
+		9EB766C3175BDB5D00B8D479 /* japanesePlacemat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = japanesePlacemat.jpg; sourceTree = "<group>"; };
 		C72E9BA31756A443007BFFF3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C72E9BA51756A44D007BFFF3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C72E9BDA17571486007BFFF3 /* chopstickBowl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chopstickBowl.jpg; sourceTree = "<group>"; };
@@ -263,7 +264,6 @@
 				9E764E67175667AC00FEB118 /* AppDelegate.h */,
 				9E764E68175667AC00FEB118 /* AppDelegate.m */,
 				9E764E70175667AC00FEB118 /* MainStoryboard.storyboard */,
-				9E2C2ECF1757F21A0055F1D5 /* SushiCollectionViewCell.h */,
 				9E764E7B17566C5A00FEB118 /* MapViewController.h */,
 				9E764E7C17566C5A00FEB118 /* MapViewController.m */,
 				C7C69AC4175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.h */,
@@ -277,22 +277,7 @@
 				DD657FE617569CBA00A64ED6 /* VenueObject.m */,
 				9E764E7E17566C6400FEB118 /* NearViewController.h */,
 				9E764E7F17566C6400FEB118 /* NearViewController.m */,
-				9E764E8117566C6D00FEB118 /* WikiViewController.h */,
-				9E764E8217566C6D00FEB118 /* WikiViewController.m */,
-				9E764E871756932200FEB118 /* WikiDetailViewController.h */,
-				9E764E881756932200FEB118 /* WikiDetailViewController.m */,
-				9E59317617590CC80026246A /* AddSushiViewController.h */,
-				9E59317717590CC90026246A /* AddSushiViewController.m */,
-				9E59317C175923990026246A /* AddSushiDelegate.h */,
-				9E5931791759107B0026246A /* AddSushiCustomCell.h */,
-				9E59317A1759107B0026246A /* AddSushiCustomCell.m */,
-				9E2C2ED417585FCC0055F1D5 /* NSString+StripHTMLTags.h */,
-				9E2C2ED517585FCC0055F1D5 /* NSString+StripHTMLTags.m */,
-				9E764E8417568F1F00FEB118 /* SushiTypeTableCell.h */,
-				9E764E8517568F1F00FEB118 /* SushiTypeTableCell.m */,
-				9E2C2ED01757F21A0055F1D5 /* SushiCollectionViewCell.m */,
-				9E764E8A1756983300FEB118 /* SushiType.h */,
-				9E764E8B1756983300FEB118 /* SushiType.m */,
+				9EEED172175BFBFB00EBA5A9 /* Wiki */,
 				9EA345E0175B0EC500728752 /* Classes */,
 				9EA34600175B0EC500728752 /* Resources */,
 				9E593165175901360026246A /* MSTranslateVendor */,
@@ -383,6 +368,62 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		9EEED172175BFBFB00EBA5A9 /* Wiki */ = {
+			isa = PBXGroup;
+			children = (
+				9EEED173175BFC0500EBA5A9 /* Main */,
+				9EEED174175BFC1000EBA5A9 /* MainDetail */,
+				9EEED175175BFC1A00EBA5A9 /* AddSushi */,
+				9EEED176175BFC3500EBA5A9 /* Pic */,
+			);
+			name = Wiki;
+			sourceTree = "<group>";
+		};
+		9EEED173175BFC0500EBA5A9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9E764E8A1756983300FEB118 /* SushiType.h */,
+				9E764E8B1756983300FEB118 /* SushiType.m */,
+				9E764E8417568F1F00FEB118 /* SushiTypeTableCell.h */,
+				9E764E8517568F1F00FEB118 /* SushiTypeTableCell.m */,
+				9E764E8117566C6D00FEB118 /* WikiViewController.h */,
+				9E764E8217566C6D00FEB118 /* WikiViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		9EEED174175BFC1000EBA5A9 /* MainDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9E2C2ECF1757F21A0055F1D5 /* SushiCollectionViewCell.h */,
+				9E2C2ED01757F21A0055F1D5 /* SushiCollectionViewCell.m */,
+				9E764E871756932200FEB118 /* WikiDetailViewController.h */,
+				9E764E881756932200FEB118 /* WikiDetailViewController.m */,
+			);
+			name = MainDetail;
+			sourceTree = "<group>";
+		};
+		9EEED175175BFC1A00EBA5A9 /* AddSushi */ = {
+			isa = PBXGroup;
+			children = (
+				9E5931791759107B0026246A /* AddSushiCustomCell.h */,
+				9E59317A1759107B0026246A /* AddSushiCustomCell.m */,
+				9E59317C175923990026246A /* AddSushiDelegate.h */,
+				9E59317617590CC80026246A /* AddSushiViewController.h */,
+				9E59317717590CC90026246A /* AddSushiViewController.m */,
+			);
+			name = AddSushi;
+			sourceTree = "<group>";
+		};
+		9EEED176175BFC3500EBA5A9 /* Pic */ = {
+			isa = PBXGroup;
+			children = (
+				9EB766C3175BDB5D00B8D479 /* japanesePlacemat.jpg */,
+				9EB766C1175BD01700B8D479 /* caliRollBG.png */,
+			);
+			name = Pic;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -456,6 +497,8 @@
 				9EA34621175B0EC500728752 /* Lato-Light.ttf in Resources */,
 				9EA34622175B0EC500728752 /* Lato-LightItalic.ttf in Resources */,
 				9EA34623175B0EC500728752 /* Lato-Regular.ttf in Resources */,
+				9EB766C2175BD01700B8D479 /* caliRollBG.png in Resources */,
+				9EB766C4175BDB5D00B8D479 /* japanesePlacemat.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +519,6 @@
 				9E764E891756932200FEB118 /* WikiDetailViewController.m in Sources */,
 				9E764E8C1756983300FEB118 /* SushiType.m in Sources */,
 				9E2C2ED11757F21A0055F1D5 /* SushiCollectionViewCell.m in Sources */,
-				9E2C2ED617585FCC0055F1D5 /* NSString+StripHTMLTags.m in Sources */,
 				9E593171175901360026246A /* MSTranslateAccessTokenRequester.m in Sources */,
 				9E593172175901360026246A /* MSTranslateVendor.m in Sources */,
 				9E593173175901360026246A /* NSMutableURLRequest+WebServiceExtend.m in Sources */,

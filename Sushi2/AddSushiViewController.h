@@ -21,7 +21,6 @@
 @property (strong, nonatomic) id <AddSushiDelegate> addSushiDelegate;
 
 - (IBAction)confirmEntry:(id)sender;
-- (IBAction)addPic:(id)sender;
 
 - (IBAction)doneAddingSushi:(id)sender;
 - (IBAction)cancelAddSushi:(id)sender;

@@ -114,6 +114,27 @@
     return [UIColor colorFromHexCode:@"7F8C8D"];
 }
 
++ (UIColor *) japanesePinkColor {
+    return [UIColor colorFromHexCode:@"FF0072"];
+}
+
++ (UIColor *) japaneseSalmonColor
+{
+    return [UIColor colorFromHexCode:@"FF8A7B"];
+}
++ (UIColor *) japaneseCreamColor
+{
+    return [UIColor colorFromHexCode:@"FFDFB2"];
+}
++ (UIColor *) japaneseGreenColor
+{
+    return [UIColor colorFromHexCode:@"C4D9AB"];
+}
++ (UIColor *) japaneseTurqoiseColor
+{
+    return [UIColor colorFromHexCode:@"63A58B"];
+}
+
 + (UIColor *) blendedColorWithForegroundColor:(UIColor *)foregroundColor
                               backgroundColor:(UIColor *)backgroundColor
                                  percentBlend:(CGFloat) percentBlend {
