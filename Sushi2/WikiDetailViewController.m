@@ -20,6 +20,10 @@
     NSString *jsString;
     
     NSString *htmlContent;
+    
+    //social stuff
+    SLComposeViewController *slComposeViewController;
+    UIActivityViewController *uiActivityViewController;
 }
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -53,12 +57,16 @@
     [self.backgroundOperationQueue setMaxConcurrentOperationCount:1];
     
     //webview
-    NSString *sushiNameForWiki = [self.selectedSushiType.name stringByReplacingOccurrencesOfString:@" " withString:@"_"];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://en.wikipedia.org/wiki/%@",sushiNameForWiki]];
-    htmlContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:urlRequest];
-    self.webView.hidden = YES;
+    if (self.selectedSushiType.isNotUserCreated) {
+        NSString *sushiNameForWiki = [self.selectedSushiType.name stringByReplacingOccurrencesOfString:@" " withString:@"_"];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://en.wikipedia.org/wiki/%@",sushiNameForWiki]];
+        htmlContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+        [self.webView loadRequest:urlRequest];
+        self.webView.hidden = YES;
+    } else {
+        self.wikiText.text = self.selectedSushiType.description;
+    }
 }
 
 
@@ -75,6 +83,9 @@
     sushiPicServerArray = [NSMutableArray array];
     sushiPicSecretArray = [NSMutableArray array];
     sushiActualPictureArray = [NSMutableArray array];
+    
+    [sushiActualPictureArray addObject:self.selectedSushiType.sushiLogo];
+    [self.collectionView reloadData];
     
     NSString *searchParameters = [self.selectedSushiType.name stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     NSString *searchParametersLowerCase = [searchParameters lowercaseString];
@@ -156,6 +167,7 @@
     NSLog(@"webviewloaded");
     jsString =  [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('p')[0].textContent;"];
     self.wikiText.text = jsString;
+    
     NSLog(@"dfgfd %@",jsString);
     
 }
@@ -165,5 +177,16 @@
     jsString =  [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('p')[0];"];
     self.wikiText.text = jsString;
     NSLog(@"%@",jsString);
+}
+
+- (IBAction)shareToSocial:(id)sender {
+    NSString *someText = [NSString stringWithFormat:@"check out this awesome app @sushifinder! this is a %@! looks delicious!",self.selectedSushiType.name];
+    NSArray *dataToShare = @[someText, self.selectedSushiType.sushiLogo];
+    
+    uiActivityViewController = [[UIActivityViewController alloc] initWithActivityItems:dataToShare applicationActivities:nil];
+    uiActivityViewController.excludedActivityTypes = @[UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact];
+    [self presentViewController:uiActivityViewController animated:YES completion:^{
+        //stuff
+    }];
 }
 @end

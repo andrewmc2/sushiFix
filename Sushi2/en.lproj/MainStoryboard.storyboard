@@ -226,7 +226,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8OL-ue-jxU"/>
+                    <navigationItem key="navigationItem" id="8OL-ue-jxU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Yub-Gh-GzQ">
+                            <connections>
+                                <action selector="shareToSocial:" destination="1TD-Az-2h5" id="8Uc-db-YXF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="iI7-aL-161" id="xNt-wG-i1k"/>
                         <outlet property="sushiName" destination="N8k-Mq-sUd" id="rHC-c7-6EN"/>
@@ -243,11 +249,11 @@
             <objects>
                 <viewController id="pe8-xH-pLF" customClass="AddSushiViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WRj-6g-RXr">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="74" sectionHeaderHeight="10" sectionFooterHeight="10" id="T5d-3f-hMO">
-                                <rect key="frame" x="0.0" y="97" width="320" height="358"/>
+                                <rect key="frame" x="0.0" y="166" width="320" height="382"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
@@ -286,11 +292,11 @@
                                 </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="psy-4W-yuv">
-                                <rect key="frame" x="12" y="5" width="122" height="84"/>
+                                <rect key="frame" x="12" y="60" width="122" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g2w-ir-VzS">
-                                <rect key="frame" x="170" y="20" width="77" height="44"/>
+                                <rect key="frame" x="170" y="80" width="77" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="add pic">
@@ -300,7 +306,28 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPic:" destination="pe8-xH-pLF" eventType="touchUpInside" id="tBg-hb-KTR"/>
+                                </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" id="Tqq-VU-f1D">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="V9z-vh-9fA">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="qIZ-EM-kGv">
+                                            <connections>
+                                                <action selector="cancelAddSushi:" destination="pe8-xH-pLF" id="LrB-ql-tok"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="done" id="Ii0-QE-OJD">
+                                            <connections>
+                                                <action selector="doneAddingSushi:" destination="pe8-xH-pLF" id="iFZ-Nf-S8U"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -377,7 +404,7 @@
                     <navigationItem key="navigationItem" id="h0m-bs-mhf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f24-0w-BJm">
                             <connections>
-                                <segue destination="pe8-xH-pLF" kind="push" identifier="addSushi" id="TDh-0o-uJs"/>
+                                <segue destination="pe8-xH-pLF" kind="modal" identifier="addSushi" id="TDh-0o-uJs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -472,6 +499,83 @@
         <image name="1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg" width="388" height="290"/>
         <image name="chopstickBowl.jpg" width="449" height="299"/>
     </resources>
+    <classes>
+        <class className="AddSushiCustomCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSushiCustomCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="cellName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cellTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="AddSushiViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSushiViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addPic:"/>
+                <relationship kind="action" name="cancelAddSushi:"/>
+                <relationship kind="action" name="confirmEntry:"/>
+                <relationship kind="action" name="doneAddingSushi:"/>
+                <relationship kind="outlet" name="addPic" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="addedImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="NearViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NearViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="nearestVenueAddressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nearestVenueLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="needle" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="SushiCollectionViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SushiCollectionViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="sushiImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="sushiLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SushiTypeTableCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SushiTypeTableCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="japaneseSushiName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sushiImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="sushiName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="WikiDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="logArray:"/>
+                <relationship kind="action" name="shareToSocial:"/>
+                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
+                <relationship kind="outlet" name="sushiName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="wikiText" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="WikiViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addSushi" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *cellName;
 @property (weak, nonatomic) IBOutlet UITextField *cellTextField;
 
+
 @end

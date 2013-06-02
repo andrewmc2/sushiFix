@@ -72,17 +72,60 @@
 #pragma mark delegate method
 
 - (IBAction)confirmEntry:(id)sender {
-    NSLog(@"%@",NSStringFromSelector(_cmd));
+
+}
+
+#pragma mark add picture 
+
+- (IBAction)addPic:(id)sender {
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Choose" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Picture", @"Select from Library", nil];
+    [actionSheet showInView:self.view];
+    
+    imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            
+        } else
+        {
+            imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        }
+    } else if (buttonIndex == 1) {
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    self.selectedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.addedImage.image = self.selectedImage;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)doneAddingSushi:(id)sender {
     NSString *sushiNameString = ((AddSushiCustomCell*)([self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]])).cellTextField.text;
     NSString *sushiDescriptionString = ((AddSushiCustomCell*)([self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]])).cellTextField.text;
     
     [self.addSushiDelegate addName:sushiNameString
                     addDescription:sushiDescriptionString
-                          addImage:[UIImage imageNamed:@"chopstickBowl.jpg"]];
+                          addImage:self.selectedImage];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark add picture 
-
-
-
+- (IBAction)cancelAddSushi:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

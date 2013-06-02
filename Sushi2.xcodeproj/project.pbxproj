@@ -10,6 +10,7 @@
 		9E2C2ED11757F21A0055F1D5 /* SushiCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C2ED01757F21A0055F1D5 /* SushiCollectionViewCell.m */; };
 		9E2C2ED31758508E0055F1D5 /* japWood.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E2C2ED21758508E0055F1D5 /* japWood.png */; };
 		9E2C2ED617585FCC0055F1D5 /* NSString+StripHTMLTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C2ED517585FCC0055F1D5 /* NSString+StripHTMLTags.m */; };
+		9E50B0C1175A82E5004AFE23 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E50B0C0175A82E5004AFE23 /* Social.framework */; };
 		9E593171175901360026246A /* MSTranslateAccessTokenRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E593167175901360026246A /* MSTranslateAccessTokenRequester.m */; };
 		9E593172175901360026246A /* MSTranslateVendor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E593169175901360026246A /* MSTranslateVendor.m */; };
 		9E593173175901360026246A /* NSMutableURLRequest+WebServiceExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E59316B175901360026246A /* NSMutableURLRequest+WebServiceExtend.m */; };
@@ -17,6 +18,8 @@
 		9E593175175901360026246A /* NSXMLParser+Taged.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E593170175901360026246A /* NSXMLParser+Taged.m */; };
 		9E59317817590CC90026246A /* AddSushiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E59317717590CC90026246A /* AddSushiViewController.m */; };
 		9E59317B1759107B0026246A /* AddSushiCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E59317A1759107B0026246A /* AddSushiCustomCell.m */; };
+		9E59317E1759757F0026246A /* phillyRoll.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E59317D1759757F0026246A /* phillyRoll.jpg */; };
+		9E593180175975C20026246A /* spiderRoll.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E59317F175975C20026246A /* spiderRoll.jpg */; };
 		9E764E59175667AC00FEB118 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E764E58175667AC00FEB118 /* UIKit.framework */; };
 		9E764E5B175667AC00FEB118 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E764E5A175667AC00FEB118 /* Foundation.framework */; };
 		9E764E5D175667AC00FEB118 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E764E5C175667AC00FEB118 /* CoreGraphics.framework */; };
@@ -49,6 +52,7 @@
 		9E2C2ED21758508E0055F1D5 /* japWood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = japWood.png; sourceTree = "<group>"; };
 		9E2C2ED417585FCC0055F1D5 /* NSString+StripHTMLTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StripHTMLTags.h"; sourceTree = "<group>"; };
 		9E2C2ED517585FCC0055F1D5 /* NSString+StripHTMLTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StripHTMLTags.m"; sourceTree = "<group>"; };
+		9E50B0C0175A82E5004AFE23 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		9E593166175901360026246A /* MSTranslateAccessTokenRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTranslateAccessTokenRequester.h; sourceTree = "<group>"; };
 		9E593167175901360026246A /* MSTranslateAccessTokenRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTranslateAccessTokenRequester.m; sourceTree = "<group>"; };
 		9E593168175901360026246A /* MSTranslateVendor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTranslateVendor.h; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 		9E5931791759107B0026246A /* AddSushiCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSushiCustomCell.h; sourceTree = "<group>"; };
 		9E59317A1759107B0026246A /* AddSushiCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSushiCustomCell.m; sourceTree = "<group>"; };
 		9E59317C175923990026246A /* AddSushiDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddSushiDelegate.h; sourceTree = "<group>"; };
+		9E59317D1759757F0026246A /* phillyRoll.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = phillyRoll.jpg; sourceTree = "<group>"; };
+		9E59317F175975C20026246A /* spiderRoll.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spiderRoll.jpg; sourceTree = "<group>"; };
 		9E764E55175667AC00FEB118 /* Sushi2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sushi2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E764E58175667AC00FEB118 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9E764E5A175667AC00FEB118 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E50B0C1175A82E5004AFE23 /* Social.framework in Frameworks */,
 				DD657FEB1756AE6400A64ED6 /* MapKit.framework in Frameworks */,
 				DD657FE91756ADFF00A64ED6 /* CoreLocation.framework in Frameworks */,
 				C72E9BA61756A44D007BFFF3 /* CoreLocation.framework in Frameworks */,
@@ -141,6 +148,7 @@
 		9E764E4C175667AC00FEB118 = {
 			isa = PBXGroup;
 			children = (
+				9E50B0C0175A82E5004AFE23 /* Social.framework */,
 				DD657FEA1756AE6400A64ED6 /* MapKit.framework */,
 				DD657FE81756ADFE00A64ED6 /* CoreLocation.framework */,
 				9E764E5E175667AC00FEB118 /* Sushi2 */,
@@ -183,6 +191,8 @@
 				9E764E7F17566C6400FEB118 /* NearViewController.m */,
 				9E764E8117566C6D00FEB118 /* WikiViewController.h */,
 				9E764E8217566C6D00FEB118 /* WikiViewController.m */,
+				9E764E871756932200FEB118 /* WikiDetailViewController.h */,
+				9E764E881756932200FEB118 /* WikiDetailViewController.m */,
 				9E59317617590CC80026246A /* AddSushiViewController.h */,
 				9E59317717590CC90026246A /* AddSushiViewController.m */,
 				9E59317C175923990026246A /* AddSushiDelegate.h */,
@@ -190,8 +200,6 @@
 				9E59317A1759107B0026246A /* AddSushiCustomCell.m */,
 				9E2C2ED417585FCC0055F1D5 /* NSString+StripHTMLTags.h */,
 				9E2C2ED517585FCC0055F1D5 /* NSString+StripHTMLTags.m */,
-				9E764E871756932200FEB118 /* WikiDetailViewController.h */,
-				9E764E881756932200FEB118 /* WikiDetailViewController.m */,
 				9E764E8417568F1F00FEB118 /* SushiTypeTableCell.h */,
 				9E764E8517568F1F00FEB118 /* SushiTypeTableCell.m */,
 				9E2C2ECF1757F21A0055F1D5 /* SushiCollectionViewCell.h */,
@@ -207,6 +215,8 @@
 		9E764E5F175667AC00FEB118 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9E59317F175975C20026246A /* spiderRoll.jpg */,
+				9E59317D1759757F0026246A /* phillyRoll.jpg */,
 				9E2C2ED21758508E0055F1D5 /* japWood.png */,
 				DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */,
 				C72E9BDA17571486007BFFF3 /* chopstickBowl.jpg */,
@@ -282,6 +292,8 @@
 				9E764E8E17569B8C00FEB118 /* dynamiteRoll.png in Resources */,
 				C72E9BDB17571486007BFFF3 /* chopstickBowl.jpg in Resources */,
 				9E2C2ED31758508E0055F1D5 /* japWood.png in Resources */,
+				9E59317E1759757F0026246A /* phillyRoll.jpg in Resources */,
+				9E593180175975C20026246A /* spiderRoll.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
