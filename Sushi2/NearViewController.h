@@ -12,6 +12,9 @@
 #import "AppDelegate.h"
 
 @interface NearViewController : UIViewController <CLLocationManagerDelegate>
+{
+    
+}
+
 
 @end
-
