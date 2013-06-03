@@ -10,12 +10,16 @@
 #import <MapKit/MapKit.h>
 #import "webViewController.h"
 #import "AppDelegate.h"
+#import "LocalVenueObject.h"
 
 
 @interface NearViewController ()
 {
     CLLocationManager *locationManager;
     NSString *venue4SQWebAddress;
+    NSMutableArray *arrayWithDistance;
+    NSArray *distanceSortedArray;
+
     float userLatitude;
     float userLongitude;
 }
@@ -24,6 +28,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *nearestVenueAddressLabel;
 @property (strong, nonatomic) IBOutlet UILabel *nearestVenueLabel;
 @property (nonatomic) CLLocationCoordinate2D venueCoordinate;
+@property (strong, nonatomic) IBOutlet UILabel *distanceLabel;
 
 
 -(IBAction)goToVenuePageButton:(id)sender;
@@ -52,20 +57,14 @@
     [self startStandardLocationServices];
 
     
-
-    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     
     CLLocation * ourlocation = [locations lastObject];
-    
-    
-    NSLog(@"this is from NearVicewCOntroller: %f", ourlocation.coordinate.latitude);
     userLatitude = ourlocation.coordinate.latitude;
     userLongitude = ourlocation.coordinate.longitude;
     
-    NSLog(@"%f USER latitude", userLatitude);
 }
 
 
@@ -80,10 +79,7 @@
     
     [locationManager startUpdatingLocation];
     
-  //  [self distanceBetweenCoordinate:<#(CLLocationCoordinate2D)#> andCoordinate:<#(CLLocationCoordinate2D)#>];
-    
-    
-       
+         
 }
 
 
@@ -99,20 +95,94 @@
 
 -(void) nearestVenue
 {
-    NSString *nearestVenue = [[itemArray objectAtIndex:0]objectForKey:@"name"];
-    NSString *nearestVenueAddress = [[itemArray objectAtIndex:0]valueForKeyPath: @"location.address"];
-
-     NSString *venueLatitude = [[itemArray objectAtIndex:0]valueForKeyPath:@"location.lat"];
-     NSString *venueLongitude = [[itemArray objectAtIndex:0]valueForKeyPath:@"location.lng"];
-     self.venueCoordinate = CLLocationCoordinate2DMake([venueLatitude floatValue], [venueLongitude floatValue]);
+//    NSString *nearestVenue = [[itemArray objectAtIndex:0]objectForKey:@"name"];
+//    NSString *nearestVenueAddress = [[itemArray objectAtIndex:0]valueForKeyPath: @"location.address"];
+//
+//     NSString *venueLatitude = [[itemArray objectAtIndex:0]valueForKeyPath:@"location.lat"];
+//     NSString *venueLongitude = [[itemArray objectAtIndex:0]valueForKeyPath:@"location.lng"];
+//     self.venueCoordinate = CLLocationCoordinate2DMake([venueLatitude floatValue], [venueLongitude floatValue]);
     
-    NSLog(@"the nearest venue is %@, and it is located %@", nearestVenue, nearestVenueAddress);
-    self.nearestVenueLabel.text =  nearestVenue;
-    self.nearestVenueAddressLabel.text = nearestVenueAddress;
+//    self.nearestVenueLabel.text =  nearestVenue;
+//    self.nearestVenueAddressLabel.text = nearestVenueAddress;
     
-    NSLog(@"%f, %f", self.venueCoordinate.latitude, self.venueCoordinate.longitude);
+   
+    
+    arrayWithDistance =  [[NSMutableArray alloc]init];
+    
+    
+    for (NSDictionary *venueDictionary in itemArray) {
+        
+        
+        NSString *name = [venueDictionary valueForKeyPath:@"name"];
+        
+        NSString *streetAddress = [venueDictionary valueForKeyPath:@"location.address"];
+        
+        NSNumber *distance = [venueDictionary valueForKeyPath:@"location.distance"];
+        NSString *fourSquareWebPage = [venueDictionary valueForKeyPath:@"canonicalUrl"];
+        
+        
+        LocalVenueObject *localVenueObject = [LocalVenueObject LocalVenueObjectwithName:name andStreetAddress:streetAddress Distance:distance andFourSquareWebPage:fourSquareWebPage];
+        
+        [arrayWithDistance addObject:localVenueObject];
+        
+        
+    } //end of fast enum
+    
+    NSLog(@"%@ venuearraywithdistance", arrayWithDistance);
+    [self sortArray];
     
 }
+
+-(void) sortArray {
+NSSortDescriptor *sortDescriptor;
+sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"distance"
+                                             ascending:YES];
+NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+distanceSortedArray = [arrayWithDistance sortedArrayUsingDescriptors:sortDescriptors];
+    NSLog(@"%@",distanceSortedArray);
+    
+    NSString *nearestVenue = [[distanceSortedArray objectAtIndex:0]valueForKeyPath:@"name"];
+    NSString *nearestVenueAddress = [[distanceSortedArray objectAtIndex:0]valueForKeyPath:@"streetAddress"];
+    NSNumber *nearestVenueDistance = [[distanceSortedArray objectAtIndex:0]valueForKeyPath:@"distance"];
+    NSString *nearestVenueWebsite = [[distanceSortedArray objectAtIndex:0]valueForKeyPath:@"fourSquareWebPage"];
+    NSLog(@"web site: %@", nearestVenueWebsite);
+    
+    NSNumber *furtherestVenueDistance = [[distanceSortedArray objectAtIndex:28]valueForKeyPath:@"distance"];
+    NSLog(@"furtherest distance: %f", [furtherestVenueDistance floatValue]);
+    
+    self.nearestVenueLabel.text =  nearestVenue;
+    NSLog(@"nearest venue: %@", nearestVenue);
+    
+    self.nearestVenueAddressLabel.text = nearestVenueAddress;
+    NSLog(@"nearest addreess: %@", nearestVenueAddress);
+
+    NSLog(@"nearest distance: %f", [nearestVenueDistance floatValue]);
+
+   float  nearestVenueDistanceInMiles = ([nearestVenueDistance floatValue]*0.00062137);
+    
+    NSLog(@"nearestVenueDistanceinMiles: %.2f", nearestVenueDistanceInMiles);
+    self.distanceLabel.text = [NSString stringWithFormat:@"%.2f miles", nearestVenueDistanceInMiles];
+
+    
+    
+
+    
+    
+    
+    
+    
+
+}
+
+
+    
+    
+    
+    
+    
+    
+    
+
 
 
 - (void)didReceiveMemoryWarning
@@ -125,14 +195,14 @@
 
 - (IBAction)goToVenuePageButton:(id)sender {
     
-    venue4SQWebAddress = [[itemArray objectAtIndex:0]objectForKey:@"canonicalUrl"];    NSLog(@"%@ the web page is...", venue4SQWebAddress);
+    venue4SQWebAddress = [[distanceSortedArray objectAtIndex:0]valueForKeyPath:@"fourSquareWebPage"];
+    NSLog(@"%@ the web page is...", venue4SQWebAddress);
     
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
-    //((webViewController *)segue.destinationViewController)) = sender;
     
     webViewController* fourSqWebViewController = [segue destinationViewController];
     fourSqWebViewController.venueWebSite = venue4SQWebAddress;
@@ -140,19 +210,5 @@
 }
 
 
-//-(CLLocationCoordinate2D)distance
--(CLLocationDistance)distanceBetweenCoordinate:(CLLocationCoordinate2D)userCoordinate andCoordinate:(CLLocationCoordinate2D)venueCoordinate {
-    
-    CLLocation *currentLocation =[[CLLocation alloc] initWithLatitude:userCoordinate.latitude
-                                                           longitude:userCoordinate.longitude];
-    
-    CLLocation *destinationLocation = [[CLLocation alloc] initWithLatitude:venueCoordinate.latitude
-                                                                longitude:venueCoordinate.longitude];
-    
-    CLLocationDistance distance = [currentLocation distanceFromLocation:destinationLocation];
-    
-    return distance;
-    NSLog(@"distance %f", distance);
-}
 
 @end
