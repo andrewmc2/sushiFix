@@ -67,6 +67,7 @@
 		C72E9BA41756A443007BFFF3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72E9BA31756A443007BFFF3 /* MapKit.framework */; };
 		C72E9BA61756A44D007BFFF3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72E9BA51756A44D007BFFF3 /* CoreLocation.framework */; };
 		C72E9BDB17571486007BFFF3 /* chopstickBowl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C72E9BDA17571486007BFFF3 /* chopstickBowl.jpg */; };
+		C760B272175C0D130051BEC6 /* LocalVenueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C760B271175C0D130051BEC6 /* LocalVenueObject.m */; };
 		C7C69AC6175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C69AC5175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.m */; };
 		DD657FE41756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */; };
 		DD657FE717569CBA00A64ED6 /* VenueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DD657FE617569CBA00A64ED6 /* VenueObject.m */; };
@@ -173,6 +174,8 @@
 		C72E9BA31756A443007BFFF3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C72E9BA51756A44D007BFFF3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C72E9BDA17571486007BFFF3 /* chopstickBowl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chopstickBowl.jpg; sourceTree = "<group>"; };
+		C760B270175C0D130051BEC6 /* LocalVenueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalVenueObject.h; path = ../LocalVenueObject.h; sourceTree = "<group>"; };
+		C760B271175C0D130051BEC6 /* LocalVenueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalVenueObject.m; path = ../LocalVenueObject.m; sourceTree = "<group>"; };
 		C7C69AC4175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearVenue4SqWebVCViewController.h; sourceTree = "<group>"; };
 		C7C69AC5175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearVenue4SqWebVCViewController.m; sourceTree = "<group>"; };
 		DD657FE31756899800A64ED6 /* 1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1946474-baddie_brawl_michael_myers_vs_jason_voorhees_20071002034833563_000.jpg"; sourceTree = "<group>"; };
@@ -266,8 +269,6 @@
 				9E764E70175667AC00FEB118 /* MainStoryboard.storyboard */,
 				9E764E7B17566C5A00FEB118 /* MapViewController.h */,
 				9E764E7C17566C5A00FEB118 /* MapViewController.m */,
-				C7C69AC4175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.h */,
-				C7C69AC5175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.m */,
 				DDEBF729175AA7E50088172F /* SushiVenueAnnotation.h */,
 				DDEBF72A175AA7E50088172F /* SushiVenueAnnotation.m */,
 				DDEBF72C175AAABD0088172F /* mobilemakers.png */,
@@ -275,8 +276,7 @@
 				DD8F3818175945AB00D0EED0 /* SushiFourSquareWebVC.m */,
 				DD657FE517569CBA00A64ED6 /* VenueObject.h */,
 				DD657FE617569CBA00A64ED6 /* VenueObject.m */,
-				9E764E7E17566C6400FEB118 /* NearViewController.h */,
-				9E764E7F17566C6400FEB118 /* NearViewController.m */,
+				C760B26F175C0CE90051BEC6 /* Near */,
 				9EEED172175BFBFB00EBA5A9 /* Wiki */,
 				9EA345E0175B0EC500728752 /* Classes */,
 				9EA34600175B0EC500728752 /* Resources */,
@@ -424,6 +424,19 @@
 			name = Pic;
 			sourceTree = "<group>";
 		};
+		C760B26F175C0CE90051BEC6 /* Near */ = {
+			isa = PBXGroup;
+			children = (
+				9E764E7F17566C6400FEB118 /* NearViewController.m */,
+				9E764E7E17566C6400FEB118 /* NearViewController.h */,
+				C760B270175C0D130051BEC6 /* LocalVenueObject.h */,
+				C760B271175C0D130051BEC6 /* LocalVenueObject.m */,
+				C7C69AC4175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.h */,
+				C7C69AC5175ACBE60001DEC2 /* NearVenue4SqWebVCViewController.m */,
+			);
+			name = Near;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -544,6 +557,7 @@
 				9EA34617175B0EC500728752 /* UIStepper+FlatUI.m in Sources */,
 				9EA34618175B0EC500728752 /* UITabBar+FlatUI.m in Sources */,
 				9EA34619175B0EC500728752 /* UITableViewCell+FlatUI.m in Sources */,
+				C760B272175C0D130051BEC6 /* LocalVenueObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
