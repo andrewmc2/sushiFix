@@ -17,8 +17,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *sushiName;
 @property (weak, nonatomic) IBOutlet UITextView *wikiText;
 
+@property (weak, nonatomic) IBOutlet UIView *wikiView;
+
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+
 
 - (IBAction)shareToSocial:(id)sender;
 @end

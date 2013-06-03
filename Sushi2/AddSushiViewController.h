@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *addedImage;
 @property (weak, nonatomic) IBOutlet UIButton *addPic;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *addPictureLabelView;
+
 
 @property (strong, nonatomic) id <AddSushiDelegate> addSushiDelegate;
 
