@@ -443,7 +443,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="109" sectionHeaderHeight="22" sectionFooterHeight="22" id="Cyy-4L-xea">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="1" y="0.0" width="320" height="455"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="sushiTypeCell" rowHeight="109" id="2XB-Gj-FZg" customClass="SushiTypeTableCell">
@@ -527,6 +527,7 @@
         <!--Navigation Controller - Wiki-->
         <scene sceneID="HaN-qc-fGU">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiP-3M-Ebd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="0l8-Xi-sVc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="2" title="Wiki" id="x5Z-AE-aiC"/>
                     <toolbarItems/>
@@ -539,7 +540,6 @@
                         <segue destination="yE3-AY-am1" kind="relationship" relationship="rootViewController" id="Fg8-pM-IXt"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FiP-3M-Ebd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="606" y="1398"/>
         </scene>
@@ -598,6 +598,7 @@
         <class className="AddSushiViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSushiViewController.h"/>
             <relationships>
+                <relationship kind="action" name="addPic:"/>
                 <relationship kind="action" name="cancelAddSushi:"/>
                 <relationship kind="action" name="confirmEntry:"/>
                 <relationship kind="action" name="doneAddingSushi:"/>
@@ -660,6 +661,9 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
         <class className="WikiDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiDetailViewController.h"/>
