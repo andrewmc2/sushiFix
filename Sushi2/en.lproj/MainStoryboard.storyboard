@@ -538,7 +538,6 @@
         <!--Navigation Controller - Wiki-->
         <scene sceneID="HaN-qc-fGU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FiP-3M-Ebd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="0l8-Xi-sVc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="2" title="Wiki" id="x5Z-AE-aiC"/>
                     <toolbarItems/>
@@ -551,6 +550,7 @@
                         <segue destination="yE3-AY-am1" kind="relationship" relationship="rootViewController" id="Fg8-pM-IXt"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiP-3M-Ebd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="606" y="1398"/>
         </scene>
@@ -597,113 +597,6 @@
         <image name="caliRollBG.png" width="320" height="109"/>
         <image name="japanesePlacemat.jpg" width="730" height="1178"/>
     </resources>
-    <classes>
-        <class className="AddSushiCustomCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSushiCustomCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="cellName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cellTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="AddSushiViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSushiViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addPic:"/>
-                <relationship kind="action" name="cancelAddSushi:"/>
-                <relationship kind="action" name="confirmEntry:"/>
-                <relationship kind="action" name="doneAddingSushi:"/>
-                <relationship kind="action" name="randomButton:"/>
-                <relationship kind="outlet" name="addPic" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="addPictureLabelView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="addedImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="FUIButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FUIButton.h"/>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="NearVenue4SqWebVCViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NearVenue4SqWebVCViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myWebView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="NearViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NearViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goToVenuePageButton:"/>
-                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nearestVenueAddressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nearestVenueLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="needle" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="SushiCollectionViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SushiCollectionViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="sushiImage" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="SushiFourSquareWebVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SushiFourSquareWebVC.h"/>
-            <relationships>
-                <relationship kind="outlet" name="FourSquarePage" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="SushiTypeTableCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SushiTypeTableCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="japaneseSushiName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="sushiImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="sushiName" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-        <class className="WikiDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButton:"/>
-                <relationship kind="action" name="logArray:"/>
-                <relationship kind="action" name="makeWikiAppear:"/>
-                <relationship kind="action" name="shareContent:"/>
-                <relationship kind="action" name="shareToSocial:"/>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="backButton" candidateClass="FUIButton"/>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-                <relationship kind="outlet" name="makeWikiAppearButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="shareButton" candidateClass="FUIButton"/>
-                <relationship kind="outlet" name="sushiName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="topTitle" candidateClass="UIView"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="wikiText" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="wikiView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="WikiViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="addSushi" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
