@@ -37,7 +37,12 @@
     SushiType *sushiType;
 }
 
+@property (weak, nonatomic) IBOutlet FUIButton *addMoreSushiButton;
 @property (strong, nonatomic) NSMutableArray *sushiTypeArray;
+
+
+
+
 
 @end
 
@@ -74,6 +79,17 @@
 	// Do any additional setup after loading the view.
     self.sushiTypeArray = [NSMutableArray array];
     [self createSushiDetails];
+    
+    //addsushibutton
+    self.addMoreSushiButton.buttonColor = [UIColor japaneseTurqoiseColor];
+    self.addMoreSushiButton.shadowColor = [UIColor japaneseGreenColor];
+    self.addMoreSushiButton.cornerRadius = 6.0f;
+    self.addMoreSushiButton.titleLabel.font = [UIFont boldFlatFontOfSize:13];
+    [self.addMoreSushiButton setTitleColor:[UIColor japaneseGreenColor] forState:UIControlStateNormal];
+    [self.addMoreSushiButton setTitleColor:[UIColor japaneseCreamColor] forState:UIControlStateHighlighted];
+    
+    //rotatedImage
+    
     
     //flat ui
     self.view.backgroundColor = [UIColor cloudsColor];
@@ -141,7 +157,11 @@
     cell.sushiName.text = selectedSushiType.name;
     cell.japaneseSushiName.text = selectedSushiType.japaneseName;
     cell.sushiImage.image = selectedSushiType.sushiLogo;
-
+    
+    float degrees = 20; //the value in degrees
+    cell.rotatedImage.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
+//    transform = CGAffineTransformMakeRotation(.34906585);
+    
     return cell;
 }
 

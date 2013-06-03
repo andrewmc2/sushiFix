@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sushiImage;
 @property (weak, nonatomic) IBOutlet UILabel *sushiName;
 @property (weak, nonatomic) IBOutlet UILabel *japaneseSushiName;
+@property (weak, nonatomic) IBOutlet UIImageView *rotatedImage;
 
 @end

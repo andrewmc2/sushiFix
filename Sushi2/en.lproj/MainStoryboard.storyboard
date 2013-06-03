@@ -152,7 +152,7 @@
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="iI7-aL-161">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="0.77261622809999997" blue="0.57361526559999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.87450980389999999" blue="0.69803921570000005" alpha="1" colorSpace="deviceRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vYG-j7-69o">
                                     <size key="itemSize" width="320" height="548"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -435,7 +435,7 @@
             <objects>
                 <viewController id="yE3-AY-am1" customClass="WikiViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i6s-Gt-Frs">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" image="japanesePlacemat.jpg" id="gEf-5i-V3D">
@@ -443,7 +443,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="109" sectionHeaderHeight="22" sectionFooterHeight="22" id="Cyy-4L-xea">
-                                <rect key="frame" x="1" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="40" width="320" height="455"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="sushiTypeCell" rowHeight="109" id="2XB-Gj-FZg" customClass="SushiTypeTableCell">
@@ -468,12 +468,17 @@
                                                     <color key="textColor" red="1" green="0.0" blue="0.44705882349999998" alpha="1" colorSpace="deviceRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="dynamiteRoll.png" id="QoW-ww-aRT">
+                                                    <rect key="frame" x="30" y="22" width="60" height="64"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.98823535442352295" green="0.87450987100601196" blue="0.69803923368453979" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
                                             <outlet property="japaneseSushiName" destination="oyZ-NR-fqJ" id="zZh-Oy-mUm"/>
+                                            <outlet property="rotatedImage" destination="QoW-ww-aRT" id="IuB-i6-d69"/>
                                             <outlet property="sushiImage" destination="LfB-fE-2zD" id="itj-N3-ftr"/>
                                             <outlet property="sushiName" destination="T2z-7w-CNs" id="G1U-Yg-LZV"/>
                                             <segue destination="1TD-Az-2h5" kind="modal" identifier="wikiDetailPush" modalTransitionStyle="flipHorizontal" id="UH9-uJ-VhN"/>
@@ -485,17 +490,44 @@
                                     <outlet property="delegate" destination="yE3-AY-am1" id="2SA-da-aS9"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" id="Fxm-dH-3HH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sushi Glossary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pvI-5x-wZ0">
+                                        <rect key="frame" x="81" y="10" width="159" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.87450980389999999" blue="0.69803921570000005" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mCl-qb-WhF" customClass="FUIButton">
+                                        <rect key="frame" x="287" y="7" width="25" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="pe8-xH-pLF" kind="modal" identifier="addSushi" id="pQm-Ds-koG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.38823530077934265" green="0.64705884456634521" blue="0.54509806632995605" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="vql-sR-SwT"/>
                     <navigationItem key="navigationItem" title="Sushi Glossary" id="h0m-bs-mhf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="f24-0w-BJm">
-                            <connections>
-                                <segue destination="pe8-xH-pLF" kind="modal" identifier="addSushi" id="TDh-0o-uJs"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="f24-0w-BJm"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addMoreSushiButton" destination="mCl-qb-WhF" id="9n5-pZ-7HH"/>
                         <outlet property="addSushi" destination="f24-0w-BJm" id="Guf-HK-g0c"/>
                         <outlet property="tableView" destination="Cyy-4L-xea" id="ltz-1O-Yh1"/>
                     </connections>
@@ -517,31 +549,12 @@
                     <connections>
                         <segue destination="bu5-LK-SPC" kind="relationship" relationship="viewControllers" id="LHk-1S-BJw"/>
                         <segue destination="tp8-vK-Bi1" kind="relationship" relationship="viewControllers" id="3TI-pn-3kk"/>
-                        <segue destination="0l8-Xi-sVc" kind="relationship" relationship="viewControllers" id="O89-mC-U8S"/>
+                        <segue destination="yE3-AY-am1" kind="relationship" relationship="viewControllers" id="vqG-uq-BJM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEx-Zu-8ZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="76" y="51"/>
-        </scene>
-        <!--Navigation Controller - Wiki-->
-        <scene sceneID="HaN-qc-fGU">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FiP-3M-Ebd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="0l8-Xi-sVc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="Wiki" id="x5Z-AE-aiC"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xpI-z7-Mdl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="yE3-AY-am1" kind="relationship" relationship="rootViewController" id="Fg8-pM-IXt"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="606" y="1398"/>
         </scene>
         <!--Navigation Controller - Near-->
         <scene sceneID="o1R-cP-20T">
@@ -581,10 +594,24 @@
             </objects>
             <point key="canvasLocation" x="602" y="51"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="iWN-E2-nKD">
+            <objects>
+                <viewController id="HPY-8q-EGs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1UM-bj-Jnw">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hhv-RO-6yM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="caliRollBG.png" width="320" height="109"/>
         <image name="chopstickBowl.jpg" width="449" height="299"/>
+        <image name="dynamiteRoll.png" width="100" height="75"/>
         <image name="japanesePlacemat.jpg" width="730" height="1178"/>
     </resources>
     <classes>
@@ -598,7 +625,6 @@
         <class className="AddSushiViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddSushiViewController.h"/>
             <relationships>
-                <relationship kind="action" name="addPic:"/>
                 <relationship kind="action" name="cancelAddSushi:"/>
                 <relationship kind="action" name="confirmEntry:"/>
                 <relationship kind="action" name="doneAddingSushi:"/>
@@ -649,6 +675,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SushiTypeTableCell.h"/>
             <relationships>
                 <relationship kind="outlet" name="japaneseSushiName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rotatedImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="sushiImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="sushiName" candidateClass="UILabel"/>
             </relationships>
@@ -661,9 +688,6 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
         <class className="WikiDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiDetailViewController.h"/>
@@ -688,6 +712,7 @@
         <class className="WikiViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="addMoreSushiButton" candidateClass="FUIButton"/>
                 <relationship kind="outlet" name="addSushi" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
