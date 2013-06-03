@@ -46,6 +46,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     NSLog(@"2");
+    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+    [self.addPictureLabelView addGestureRecognizer:singleFingerTap];
 }
 
 - (void)didReceiveMemoryWarning
@@ -134,6 +136,7 @@
     self.selectedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     self.addedImage.image = self.selectedImage;
     [self dismissViewControllerAnimated:YES completion:nil];
+    self.addPictureLabelView.hidden = YES;
 }
 
 - (IBAction)doneAddingSushi:(id)sender {
@@ -158,18 +161,24 @@
     if ([touch view] == self.addedImage)
     {
         //add your code for image touch here
-        NSLog(@"addedIMage");
-        
-        UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Choose" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Picture", @"Select from Library", nil];
-        [actionSheet showInView:self.view];
-        
-        imagePicker = [[UIImagePickerController alloc] init];
-        imagePicker.delegate = self;
+
     }
     
 }
 - (IBAction)randomButton:(id)sender {
     NSLog(@"%@",NSStringFromSelector(_cmd));
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Choose" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Picture", @"Select from Library", nil];
+    [actionSheet showInView:self.view];
+    
+    imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+}
+
+-(void)handleSingleTap: (UITapGestureRecognizer*)recognizer
+{
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+    NSLog(@"addedIMage");
+    
     UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Choose" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Picture", @"Select from Library", nil];
     [actionSheet showInView:self.view];
     
