@@ -507,7 +507,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiDetailViewController.h"/>
             <relationships>
                 <relationship kind="action" name="logArray:"/>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
                 <relationship kind="outlet" name="sushiName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
                 <relationship kind="outlet" name="wikiText" candidateClass="UITextView"/>
