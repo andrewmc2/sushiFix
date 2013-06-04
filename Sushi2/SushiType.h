@@ -14,5 +14,6 @@
 @property (strong, nonatomic) NSString *japaneseName;
 @property (strong, nonatomic) NSString *description;
 @property (strong, nonatomic) UIImage *sushiLogo;
+@property (nonatomic) BOOL isNotUserCreated;
 
 @end

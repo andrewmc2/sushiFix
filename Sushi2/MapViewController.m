@@ -89,15 +89,11 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     
-    // If it's a relatively recent event, turn off updates to save power
     CLLocation * ourlocation = [locations lastObject];
-    NSDate* eventDate = ourlocation.timestamp;
-    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
-    //if (abs(howRecent) < 15.0) {
     
-    // If the event is recent, do something with it.
+    
     //NSLog(@"latitude %+.6f, longitude %+.6f\n", ourlocation.coordinate.latitude, ourlocation.coordinate.longitude);
-    NSLog(@"this is from location manager: %f", ourlocation.coordinate.latitude);
+    //NSLog(@"this is from location manager: %f", ourlocation.coordinate.latitude);
     ourFloatLat = ourlocation.coordinate.latitude;
     ourFloatLong = ourlocation.coordinate.longitude;
     self.strLatitude = [NSString stringWithFormat: @"%f", ourlocation.coordinate.latitude];
@@ -105,7 +101,7 @@
     
     //[self StartStandardLocationServices];
     
-    NSLog(@"this is from viewDidLoad");
+    
     self.mapView.delegate = self;
     
     
@@ -124,7 +120,7 @@
     self.mapView.region = region;
     
     NSString *urlString = [NSString stringWithFormat:@"https://api.foursquare.com/v2/venues/search?ll=%@&query=sushi&oauth_token=R0LICVP1OPDRVUGDTBAY4YQDCCRZKQ20BLR4SNG5XVKZ5T5M", CurrentCoord];
-    NSLog(@"The search URL is%@", urlString);
+    //NSLog(@"The search URL is%@", urlString);
     
     NSURL *url = [NSURL URLWithString: urlString];
     
@@ -160,7 +156,7 @@
              oneVenue.placeID = [listVenue objectForKey:@"id"];
              oneVenue.subtitle = listVenue [@"location"][@"address"];
              oneVenue.venueURL = listVenue [@"canonicalUrl"];
-             NSLog(@"%@", oneVenue.venueURL);
+             //NSLog(@"%@", oneVenue.venueURL);
              oneVenue.placeLatitude = listVenue [@"location"][@"lat"];
              oneVenue.placeLongitude = listVenue [@"location"][@"lng"];
              oneVenue.coordinate = CLLocationCoordinate2DMake([oneVenue.placeLatitude floatValue], [oneVenue.placeLongitude floatValue]);

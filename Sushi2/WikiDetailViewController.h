@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SushiType.h"
-#import "NSString+StripHTMLTags.h"
+#import <Social/Social.h>
 
 @interface WikiDetailViewController : UIViewController  <UICollectionViewDataSource, UICollectionViewDelegate, UIWebViewDelegate>
 
@@ -17,6 +17,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *sushiName;
 @property (weak, nonatomic) IBOutlet UITextView *wikiText;
 
+@property (weak, nonatomic) IBOutlet UIView *wikiView;
+
+
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
+
+- (IBAction)shareToSocial:(id)sender;
 @end

@@ -8,6 +8,9 @@
 
 #import "WikiDetailViewController.h"
 #import "SushiCollectionViewCell.h"
+#import "FUIButton.h"
+#import "UIColor+FlatUI.h"
+#import "UIFont+FlatUI.h"
 
 @interface WikiDetailViewController ()
 {
@@ -20,9 +23,26 @@
     NSString *jsString;
     
     NSString *htmlContent;
+    
+    //social stuff
+    SLComposeViewController *slComposeViewController;
+    UIActivityViewController *uiActivityViewController;
 }
-
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIView *topTitle;
+@property (weak, nonatomic) IBOutlet FUIButton *backButton;
+@property (weak, nonatomic) IBOutlet FUIButton *shareButton;
+@property (weak, nonatomic) IBOutlet UIButton *makeWikiAppearButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+
+
+- (IBAction)makeWikiAppear:(id)sender;
+
+- (IBAction)backButton:(id)sender;
+- (IBAction)shareContent:(id)sender;
+
+
 - (IBAction)logArray:(id)sender;
 
 
@@ -52,13 +72,45 @@
     self.backgroundOperationQueue = [[NSOperationQueue alloc] init];
     [self.backgroundOperationQueue setMaxConcurrentOperationCount:1];
     
+    //  self.topTitle.hidden = YES;
+    self.wikiView.hidden = YES;
+    
+    UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeDown:)];
+    swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
+    [self.wikiView addGestureRecognizer:swipeDown];
+    
+    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeDown:)];
+    [self.view addGestureRecognizer:singleFingerTap];
+    
+    
+    //flat
+    self.backButton.buttonColor = [UIColor japaneseTurqoiseColor];
+    self.backButton.shadowColor = [UIColor japaneseGreenColor];
+    //self.backButton.shadowHeight = 3.0f;
+    self.backButton.cornerRadius = 6.0f;
+    self.backButton.titleLabel.font = [UIFont boldFlatFontOfSize:13];
+    [self.backButton setTitleColor:[UIColor japaneseGreenColor] forState:UIControlStateNormal];
+    [self.backButton setTitleColor:[UIColor japaneseCreamColor] forState:UIControlStateHighlighted];
+    
+    self.shareButton.buttonColor = [UIColor japaneseTurqoiseColor];
+    self.shareButton.shadowColor = [UIColor japaneseGreenColor];
+    //self.backButton.shadowHeight = 3.0f;
+    self.shareButton.cornerRadius = 6.0f;
+    self.shareButton.titleLabel.font = [UIFont boldFlatFontOfSize:13];
+    [self.shareButton setTitleColor:[UIColor japaneseGreenColor] forState:UIControlStateNormal];
+    [self.shareButton setTitleColor:[UIColor japaneseCreamColor] forState:UIControlStateHighlighted];
+    
     //webview
-    NSString *sushiNameForWiki = [self.selectedSushiType.name stringByReplacingOccurrencesOfString:@" " withString:@"_"];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://en.wikipedia.org/wiki/%@",sushiNameForWiki]];
-    htmlContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:urlRequest];
-    self.webView.hidden = YES;
+    if (self.selectedSushiType.isNotUserCreated) {
+        NSString *sushiNameForWiki = [self.selectedSushiType.name stringByReplacingOccurrencesOfString:@" " withString:@"_"];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://en.wikipedia.org/wiki/%@",sushiNameForWiki]];
+        htmlContent = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+        [self.webView loadRequest:urlRequest];
+        self.webView.hidden = YES;
+    } else {
+        self.wikiText.text = self.selectedSushiType.description;
+    }
 }
 
 
@@ -70,11 +122,16 @@
 
 -(void)addPictureFromFlickr
 {
+    [self.activityIndicator startAnimating];
+    
     sushiPicIdArray = [NSMutableArray array];
     sushiPicFarmArray = [NSMutableArray array];
     sushiPicServerArray = [NSMutableArray array];
     sushiPicSecretArray = [NSMutableArray array];
     sushiActualPictureArray = [NSMutableArray array];
+    
+    //[sushiActualPictureArray addObject:self.selectedSushiType.sushiLogo];
+    //[self.collectionView reloadData];
     
     NSString *searchParameters = [self.selectedSushiType.name stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     NSString *searchParametersLowerCase = [searchParameters lowercaseString];
@@ -116,6 +173,9 @@
                      //you don't want to update instance variables from different threads because the main thread could be updating it
                      //therefore get the main thread to do it
                      [sushiActualPictureArray addObject:instaPhoto];
+                     if (self.activityIndicator.isAnimating) {
+                         [self.activityIndicator stopAnimating];
+                     }
                      [self.collectionView reloadData];
                  }]; //mainQueue block end
                  [[NSOperationQueue mainQueue] addOperation:mainQueueOperation];
@@ -156,8 +216,28 @@
     NSLog(@"webviewloaded");
     jsString =  [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('p')[0].textContent;"];
     self.wikiText.text = jsString;
+    
     NSLog(@"dfgfd %@",jsString);
     
+}
+
+- (IBAction)makeWikiAppear:(id)sender {
+    self.makeWikiAppearButton.hidden = YES;
+    [UIView transitionWithView:self.wikiView
+                      duration:0.3f
+                       options:UIViewAnimationOptionTransitionFlipFromBottom
+                    animations:^{
+        self.wikiView.hidden = NO;
+    }
+                    completion:nil
+                              ];
+}
+
+- (IBAction)backButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)shareContent:(id)sender {
 }
 
 - (IBAction)logArray:(id)sender {
@@ -166,4 +246,55 @@
     self.wikiText.text = jsString;
     NSLog(@"%@",jsString);
 }
+
+- (IBAction)shareToSocial:(id)sender {
+    NSString *someText = [NSString stringWithFormat:@"check out this awesome app @sushifinder! this is a %@! looks delicious!",self.selectedSushiType.name];
+    NSArray *dataToShare = @[someText, self.selectedSushiType.sushiLogo];
+    
+    uiActivityViewController = [[UIActivityViewController alloc] initWithActivityItems:dataToShare applicationActivities:nil];
+    uiActivityViewController.excludedActivityTypes = @[UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact];
+    [self presentViewController:uiActivityViewController animated:YES completion:^{
+        //stuff
+    }];
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    
+    if ([touch view] == self.wikiText) {
+        NSLog(@"yo");
+    }
+    
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+    
+}
+
+-(void)handleSwipeDown:(UIGestureRecognizer*)recognizer
+{
+    NSLog(@"swipe");
+    if (!self.wikiView.hidden) {
+        [UIView transitionWithView:self.wikiView
+                          duration:0.3f
+                           options:UIViewAnimationOptionTransitionFlipFromTop
+                        animations:^{
+                            self.wikiView.hidden = YES;
+                        }
+                        completion:nil
+         ];
+        self.makeWikiAppearButton.hidden = NO;
+    } else {
+        [UIView transitionWithView:self.wikiView
+                          duration:0.3f
+                           options:UIViewAnimationOptionTransitionFlipFromBottom
+                        animations:^{
+                            self.wikiView.hidden = NO;
+                        }
+                        completion:nil
+         ];
+        self.makeWikiAppearButton.hidden = YES;
+    }
+}
+
+
 @end

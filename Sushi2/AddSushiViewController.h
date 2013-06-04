@@ -9,18 +9,22 @@
 #import <UIKit/UIKit.h>
 #import "AddSushiDelegate.h"
 
-@interface AddSushiViewController : UIViewController
-
+@interface AddSushiViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
+{
+    UIImagePickerController *imagePicker;
+}
+@property (weak, nonatomic) UIImage *selectedImage;
 @property (weak, nonatomic) IBOutlet UIImageView *addedImage;
 @property (weak, nonatomic) IBOutlet UIButton *addPic;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *addPictureLabelView;
+
 
 @property (strong, nonatomic) id <AddSushiDelegate> addSushiDelegate;
 
 - (IBAction)confirmEntry:(id)sender;
 
-
-
-
+- (IBAction)doneAddingSushi:(id)sender;
+- (IBAction)cancelAddSushi:(id)sender;
 
 @end
